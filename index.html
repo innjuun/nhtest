@@ -1,7 +1,4 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>개인여신전문역 합격노트</title>
-<style>:root{--bg:#f6f7f9;--card:#fff;--ink:#1f2328;--muted:#5b6470;--line:#e3e6ea;--accent:#0b6e4f;--accent2:#e8f5ef;--star:#b45309;--starbg:#fff3e0;--th:#eef1f4;--code:#f0f2f5;--green:#15803d;
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>개인여신전문역 합격노트</title><style>:root{--bg:#f6f7f9;--card:#fff;--ink:#1f2328;--muted:#5b6470;--line:#e3e6ea;--accent:#0b6e4f;--accent2:#e8f5ef;--star:#b45309;--starbg:#fff3e0;--th:#eef1f4;--code:#f0f2f5;--green:#15803d;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111417;--card:#1a1f24;--ink:#e6e9ec;--muted:#9aa4ae;--line:#2b3238;--accent:#4fd1a5;--accent2:#12312a;--star:#ffb86b;--starbg:#3a2a12;--th:#22282e;--code:#22282e;--green:#4fd1a5}}
 :root[data-theme="dark"]{--bg:#111417;--card:#1a1f24;--ink:#e6e9ec;--muted:#9aa4ae;--line:#2b3238;--accent:#4fd1a5;--accent2:#12312a;--star:#ffb86b;--starbg:#3a2a12;--th:#22282e;--code:#22282e;--green:#4fd1a5}
@@ -83,26 +80,253 @@ details.ans summary::-webkit-details-marker{display:none}
  .tscroll td[data-label=""]::before{display:none}
 }
 @media print{header,.subtabs,.chips,.toolbar,#top{display:none}.panel,.subpanel{display:block!important}details.ans{display:block}details.ans summary{display:none}details.ans .ansbody{display:block}article.q{break-inside:avoid}}
-</style></head><body>
-<header>
-<div class="hrow"><h1>개인여신전문역 · NH 여신 I·II 합격노트</h1><button id="themebtn" class="tbtn" title="라이트/다크">◐</button></div>
-<div class="tabs">
-<button class="tab active" data-p="p0">① 핵심정리</button>
-<button class="tab" data-p="p1">② 요약카드</button>
-<button class="tab" data-p="p2">③ 1권 문제</button>
-<button class="tab" data-p="p3">④ 2권 문제</button>
-<button class="tab" data-p="p4">⑤ 복기·기출</button>
-</div></header>
-<main>
-<section class="panel active" id="p0"><blockquote>
+
+/* diagram gallery */
+.diags{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;overflow:hidden}
+.dcard h3{margin:2px 0 4px;font-size:15.5px;color:var(--accent)}
+.dcap{margin:0 0 8px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.dsvg{width:100%;height:auto;display:block}
+:root{--d1:color-mix(in srgb,var(--accent) 8%,var(--card));--d2:color-mix(in srgb,var(--accent) 16%,var(--card));--d3:color-mix(in srgb,var(--accent) 26%,var(--card));--d4:color-mix(in srgb,var(--accent) 40%,var(--card));--dwarn:color-mix(in srgb,#e11d48 16%,var(--card));--dwarn2:#b45309}
+.dt{font-size:12.5px;fill:var(--ink)}
+.dt.b{font-weight:800}
+.dt.w{fill:#fff}
+.dts{font-size:11px;fill:var(--ink)}
+.dts.w{fill:#fff}
+.darrow{stroke:var(--accent);stroke-width:2.4;fill:none}
+.dline{stroke:var(--muted);stroke-width:1.6;fill:none}
+.dtable table{width:100%;border-collapse:collapse;font-size:12px}
+.dtable th,.dtable td{border:1px solid var(--line);padding:5px 6px;text-align:center}
+.dtable th{background:var(--th);white-space:nowrap}
+.dtable td:first-child{text-align:left;font-weight:600;white-space:nowrap}
+.dtable .ok{color:var(--green);font-weight:700}
+.dtable .no{color:#e11d48;font-weight:700}
+.dtable .b{background:var(--accent2)}
+@media (max-width:600px){.diags{grid-template-columns:1fr}}
+</style></head><body><header><div class="hrow"><h1>개인여신전문역 · NH 여신 I·II 합격노트</h1><button id="themebtn" class="tbtn" title="라이트/다크">◐</button></div><div class="tabs"><button class="tab active" data-p="p0">① 핵심정리</button><button class="tab" data-p="p1">② 요약카드</button><button class="tab" data-p="p2">③ 1권 문제</button><button class="tab" data-p="p3">④ 2권 문제</button><button class="tab" data-p="p4">⑤ 복기·기출</button></div></header><main><section class="panel active" id="p0"><blockquote>
 <p><strong>이 문서의 원칙</strong>
 - 교재(9판) <strong>목차 순서</strong> 그대로 정리했고, 용어와 문장은 교재 표현을 그대로 살렸습니다. (실제 기출은 교재 문장에서 숫자·주체·한 단어만 바꿔 출제하므로, 축약된 표현보다 원문 표현에 익숙해지는 것이 유리합니다.)
 - <span class="tier t3">🔴</span> = 실제 기출·복기에 나온 논점 / <span class="tier t2">🟠</span> = 적중문제·KBI 평가에 나온 논점 / 표시 없음 = 교재 내용(출제 가능)
 - <code>⚠</code> 줄에는 기출에서 실제로 바꿔 나온 오답 표현을 적었습니다.
 - 페이지는 교재 PDF 기준입니다.</p>
 </blockquote>
-<hr />
-<h1>제1권 여신 I</h1><div class="chips"><button class="chip active" data-grp="__all">전체</button><button class="chip" data-grp="제1권 여신 I">제1권 여신 I</button><button class="chip" data-grp="제2권 여신 II">제2권 여신 II</button></div><div class="subtabs"><button class="subtab active" data-sub="c-s0" data-group="제1권 여신 I">제1장 여신의 개요</button><button class="subtab" data-sub="c-s1" data-group="제1권 여신 I">제2장 여신운용원칙</button><button class="subtab" data-sub="c-s2" data-group="제1권 여신 I">제3장 여신 관련 규제사항</button><button class="subtab" data-sub="c-s3" data-group="제2권 여신 II">제4장 약관 및 약정서</button><button class="subtab" data-sub="c-s4" data-group="제2권 여신 II">제1장 담보규정</button><button class="subtab" data-sub="c-s5" data-group="제2권 여신 II">제2장 대출금리</button><button class="subtab" data-sub="c-s6" data-group="제2권 여신 II">제3장 여신 관련 제비용</button><button class="subtab" data-sub="c-s7" data-group="제2권 여신 II">제4장 여신심사</button><button class="subtab" data-sub="c-s8" data-group="제2권 여신 II">제5장 여신전결권 운용</button><button class="subtab" data-sub="c-s9" data-group="제2권 여신 II">제6장 대출약정과 실행</button><button class="subtab" data-sub="c-s10" data-group="제2권 여신 II">제7장 여신사후관리</button></div><section class="subpanel active" id="c-s0"><h2>제1장 여신의 개요</h2>
+<hr /><div class="chips"><button class="chip active" data-grp="__all">전체</button><button class="chip" data-grp="제1권 여신 I">제1권 여신 I</button><button class="chip" data-grp="제2권 여신 II">제2권 여신 II</button></div><div class="subtabs"><button class="subtab active" data-sub="c-diag" data-group="__viz">🖼 그림으로 이해</button><button class="subtab" data-sub="c-s0" data-group="제1권 여신 I">제1장 여신의 개요</button><button class="subtab" data-sub="c-s1" data-group="제1권 여신 I">제2장 여신운용원칙</button><button class="subtab" data-sub="c-s2" data-group="제1권 여신 I">제3장 여신 관련 규제사항</button><button class="subtab" data-sub="c-s3" data-group="제1권 여신 I">제4장 약관 및 약정서</button><button class="subtab" data-sub="c-s4" data-group="제2권 여신 II">제1장 담보규정</button><button class="subtab" data-sub="c-s5" data-group="제2권 여신 II">제2장 대출금리</button><button class="subtab" data-sub="c-s6" data-group="제2권 여신 II">제3장 여신 관련 제비용</button><button class="subtab" data-sub="c-s7" data-group="제2권 여신 II">제4장 여신심사</button><button class="subtab" data-sub="c-s8" data-group="제2권 여신 II">제5장 여신전결권 운용</button><button class="subtab" data-sub="c-s9" data-group="제2권 여신 II">제6장 대출약정과 실행</button><button class="subtab" data-sub="c-s10" data-group="제2권 여신 II">제7장 여신사후관리</button></div><section class="subpanel active" id="c-diag"><div class="diags">
+
+<div class="dcard">
+<h3>① 여신의 범위 — 익스포져 &gt; 신용공여 &gt; 여신</h3>
+<p class="dcap">가장 넓은 개념이 익스포져입니다. 안쪽으로 갈수록 좁아집니다.</p>
+<svg viewBox="0 0 360 220" class="dsvg" role="img" aria-label="익스포져 신용공여 여신 포함관계">
+<rect x="10" y="10" width="340" height="200" rx="12" fill="var(--d1)"/>
+<text x="180" y="30" text-anchor="middle" class="dt b">익스포져 (가장 광의)</text>
+<rect x="35" y="45" width="290" height="150" rx="10" fill="var(--d2)"/>
+<text x="180" y="63" text-anchor="middle" class="dt b">신용공여</text>
+<text x="180" y="80" text-anchor="middle" class="dts">대출·지급보증·유가증권매입</text>
+<rect x="70" y="95" width="220" height="95" rx="9" fill="var(--d3)"/>
+<text x="180" y="118" text-anchor="middle" class="dt b">여신 (협의+광의)</text>
+<rect x="95" y="128" width="170" height="52" rx="8" fill="var(--d4)"/>
+<text x="180" y="150" text-anchor="middle" class="dt w">협의: 대출·어음할인</text>
+<text x="180" y="168" text-anchor="middle" class="dts w">광의: +지급보증·유가증권대여</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>② 여신업무의 흐름 (3단계)</h3>
+<p class="dcap">빨간 칸이 시험 함정: <b>여신신청접수</b>는 취급 <b>전</b> 단계, <b>여신감리·회수</b>는 취급 <b>후</b> 단계.</p>
+<svg viewBox="0 0 360 300" class="dsvg" role="img" aria-label="여신업무 흐름">
+<rect x="20" y="10" width="320" height="66" rx="10" fill="var(--dwarn)"/>
+<text x="30" y="30" class="dt b">취급 전</text>
+<text x="30" y="50" class="dts">여신영업·상담</text>
+<text x="30" y="68" class="dts">→ ★여신신청접수</text>
+<path d="M180 76 L180 92" class="darrow"/>
+<rect x="20" y="96" width="320" height="108" rx="10" fill="var(--d2)"/>
+<text x="30" y="116" class="dt b">취급</text>
+<text x="30" y="135" class="dts">차주현황조사 → 신용평가</text>
+<text x="30" y="153" class="dts">→ 법규검토 → 담보평가</text>
+<text x="30" y="171" class="dts">→ 조건결정 → 승인(부결도 통지)</text>
+<text x="30" y="189" class="dts">→ 실행</text>
+<path d="M180 204 L180 220" class="darrow"/>
+<rect x="20" y="224" width="320" height="66" rx="10" fill="var(--dwarn)"/>
+<text x="30" y="244" class="dt b">취급 후</text>
+<text x="30" y="264" class="dts">★사후관리(여신감리)</text>
+<text x="30" y="282" class="dts">→ 회수·기한연장</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>③ 여신운용 4대 원칙</h3>
+<p class="dcap">안정성이 가장 중요. "건전성의 원칙"은 <b>없는</b> 함정 선지.</p>
+<svg viewBox="0 0 360 240" class="dsvg" role="img" aria-label="여신운용 4대 원칙">
+<rect x="120" y="95" width="120" height="50" rx="25" fill="var(--accent)"/>
+<text x="180" y="118" text-anchor="middle" class="dt w b">안정성</text>
+<text x="180" y="135" text-anchor="middle" class="dts w">최우선</text>
+<g class="dnode"><rect x="130" y="10" width="100" height="40" rx="20" fill="var(--d3)"/><text x="180" y="35" text-anchor="middle" class="dt b">수익성</text></g>
+<g class="dnode"><rect x="130" y="190" width="100" height="40" rx="20" fill="var(--d3)"/><text x="180" y="215" text-anchor="middle" class="dt b">성장성</text></g>
+<g class="dnode"><rect x="10" y="100" width="100" height="40" rx="20" fill="var(--d3)"/><text x="60" y="125" text-anchor="middle" class="dt b">공공성</text></g>
+<g class="dnode"><rect x="250" y="100" width="100" height="40" rx="20" fill="var(--d1)"/><text x="300" y="118" text-anchor="middle" class="dts">건전성</text><text x="300" y="133" text-anchor="middle" class="dts">= 함정 ✗</text></g>
+<path d="M180 50 L180 92" class="dline"/><path d="M180 148 L180 188" class="dline"/><path d="M112 120 L118 120" class="dline"/>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>④ 은행법 신용공여한도 (자기자본 대비)</h3>
+<p class="dcap">막대 길이 = 한도 비율. 거액은 "5배"라 별도.</p>
+<svg viewBox="0 0 360 210" class="dsvg" role="img" aria-label="신용공여한도 막대">
+<g class="dbar"><text x="8" y="26" class="dts">동일차주</text><rect x="90" y="14" width="150" height="18" rx="4" fill="var(--accent)"/><text x="250" y="27" class="dt b">25%</text></g>
+<g class="dbar"><text x="8" y="56" class="dts">동일인</text><rect x="90" y="44" width="120" height="18" rx="4" fill="var(--d3)"/><text x="220" y="57" class="dt b">20%</text></g>
+<g class="dbar"><text x="8" y="86" class="dts">대주주</text><rect x="90" y="74" width="150" height="18" rx="4" fill="var(--d3)"/><text x="250" y="87" class="dt b">25%</text></g>
+<g class="dbar"><text x="8" y="116" class="dts">자회사 각</text><rect x="90" y="104" width="60" height="18" rx="4" fill="var(--d4)"/><text x="160" y="117" class="dt b">10%</text></g>
+<g class="dbar"><text x="8" y="146" class="dts">자회사 전체</text><rect x="90" y="134" width="120" height="18" rx="4" fill="var(--d4)"/><text x="220" y="147" class="dt b">20%</text></g>
+<g class="dbar"><text x="8" y="182" class="dts">거액 합계</text><rect x="90" y="164" width="240" height="22" rx="4" fill="var(--dwarn2)"/><text x="210" y="180" text-anchor="middle" class="dt w b">자기자본 5배</text></g>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑤ 소멸시효 기간</h3>
+<p class="dcap">숫자 매칭 문제 대비. 중단사유는 청구·압류·승인 3가지.</p>
+<svg viewBox="0 0 360 210" class="dsvg" role="img" aria-label="소멸시효 기간">
+<g class="dbar"><text x="8" y="28" class="dts">재산권(채권·소유권 외)</text><rect x="150" y="16" width="190" height="16" rx="4" fill="var(--accent)"/><text x="-999" y="0"></text></g>
+<text x="345" y="28" text-anchor="end" class="dt w b" transform="translate(-8)">20년</text>
+<g class="dbar"><text x="8" y="58" class="dts">일반 채권 / 판결확정</text><rect x="150" y="46" width="95" height="16" rx="4" fill="var(--d3)"/><text x="252" y="58" class="dt b">10년</text></g>
+<g class="dbar"><text x="8" y="88" class="dts">이자·급료·공사대금</text><rect x="150" y="76" width="30" height="16" rx="4" fill="var(--d4)"/><text x="188" y="88" class="dt b">3년</text></g>
+<g class="dbar"><text x="8" y="118" class="dts">숙박료·음식료</text><rect x="150" y="106" width="12" height="16" rx="4" fill="var(--d4)"/><text x="170" y="118" class="dt b">1년</text></g>
+<rect x="8" y="140" width="344" height="58" rx="9" fill="var(--d1)"/>
+<text x="20" y="162" class="dt b">중단사유 3</text>
+<text x="20" y="182" class="dts">청구 · 압류(가압류·가처분) · 승인 &nbsp;(허가·상속 ✗)</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑥ 구속행위(꺾기) — 차주별 판매 제한</h3>
+<p class="dcap">전후 <b>1개월</b>·노란우산 <b>1%</b> 기준. 상위90%는 <b>예금성 자유</b>가 포인트.</p>
+<div class="dtable">
+<table>
+<tr><th>차주</th><th>예금성</th><th>보장성</th><th>투자성</th><th>상품권</th></tr>
+<tr><td>중소기업</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+<tr><td>하위10%·제한능력</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+<tr><td>대기업·중견</td><td class="ok">○</td><td>1%↑✗</td><td class="ok">○</td><td class="no">✗</td></tr>
+<tr><td>상위90%</td><td class="ok b">○</td><td>1%↑✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dcard">
+<h3>⑦ 재예치 구속행위 제외 기준</h3>
+<p class="dcap">거치식→적립식만 "월수입금액", 나머지는 "해지금액".</p>
+<svg viewBox="0 0 360 200" class="dsvg" role="img" aria-label="재예치 기준">
+<g><rect x="10" y="15" width="150" height="34" rx="8" fill="var(--d3)"/><text x="85" y="37" text-anchor="middle" class="dt b">거치식 해지</text></g>
+<g><rect x="200" y="10" width="150" height="30" rx="8" fill="var(--d4)"/><text x="275" y="30" text-anchor="middle" class="dts">거치식 → 해지금액</text></g>
+<g><rect x="200" y="48" width="150" height="30" rx="8" fill="var(--dwarn2)"/><text x="275" y="68" text-anchor="middle" class="dt w b">적립식 → 월수입금액</text></g>
+<path d="M160 30 L200 25" class="dline"/><path d="M160 34 L200 63" class="dline"/>
+<g><rect x="10" y="120" width="150" height="34" rx="8" fill="var(--d3)"/><text x="85" y="142" text-anchor="middle" class="dt b">적립식 해지</text></g>
+<g><rect x="200" y="112" width="150" height="30" rx="8" fill="var(--d4)"/><text x="275" y="132" text-anchor="middle" class="dts">거치식 → 해지금액</text></g>
+<g><rect x="200" y="150" width="150" height="30" rx="8" fill="var(--d4)"/><text x="275" y="170" text-anchor="middle" class="dts">적립식 → 월적립금</text></g>
+<path d="M160 135 L200 127" class="dline"/><path d="M160 139 L200 165" class="dline"/>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑧ LTV 가중평균 계산 (실제 기출)</h3>
+<p class="dcap">용도별 (LTV × 면적비율)을 더하고 소수점은 버립니다.</p>
+<svg viewBox="0 0 360 210" class="dsvg" role="img" aria-label="LTV 가중평균 계산">
+<text x="10" y="24" class="dt b">전체 1,000㎡</text>
+<rect x="10" y="34" width="108" height="40" rx="6" fill="var(--d3)"/><text x="64" y="52" text-anchor="middle" class="dts">숙박 300㎡</text><text x="64" y="68" text-anchor="middle" class="dt b">50%</text>
+<rect x="122" y="34" width="108" height="40" rx="6" fill="var(--d4)"/><text x="176" y="52" text-anchor="middle" class="dts">상가 300㎡</text><text x="176" y="68" text-anchor="middle" class="dt b">40%</text>
+<rect x="234" y="34" width="116" height="40" rx="6" fill="var(--d3)"/><text x="292" y="52" text-anchor="middle" class="dts">기타 400㎡</text><text x="292" y="68" text-anchor="middle" class="dt b">50%</text>
+<text x="10" y="108" class="dts">50%×0.3 = 15</text>
+<text x="130" y="108" class="dts">40%×0.3 = 12</text>
+<text x="250" y="108" class="dts">50%×0.4 = 20</text>
+<rect x="10" y="128" width="340" height="46" rx="10" fill="var(--accent)"/>
+<text x="180" y="157" text-anchor="middle" class="dt w b">15 + 12 + 20 = 47%</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑨ 담보권에 우선하는 채권 (차감)</h3>
+<p class="dcap">담보종류별로 무엇을 빼는지 매칭. 신탁수익권은 임차보증금만.</p>
+<div class="dtable">
+<table>
+<tr><th>담보물</th><th>임차보증금</th><th>임금</th><th>조세</th></tr>
+<tr><td>부동산</td><td class="ok">○</td><td class="ok">○</td><td class="ok">○</td></tr>
+<tr><td>부동산담보신탁수익권</td><td class="ok b">○</td><td class="no">✗</td><td class="no">✗</td></tr>
+<tr><td>동산·유가증권·타행예금</td><td class="no">✗</td><td class="ok">○</td><td class="ok">○</td></tr>
+<tr><td>본인 당행예금</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+<tr><td>제3자 당행예금</td><td class="no">✗</td><td class="ok">○</td><td class="ok">○</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dcard">
+<h3>⑩ 채권보전 안정성 순위</h3>
+<p class="dcap">국공채·확정채권은 <b>2순위</b>(1순위 아님), CD·표지어음은 1순위.</p>
+<svg viewBox="0 0 360 230" class="dsvg" role="img" aria-label="채권보전 안정성 순위">
+<g><rect x="10" y="10" width="340" height="48" rx="9" fill="var(--accent)"/><text x="24" y="30" class="dt w b">1순위</text><text x="24" y="50" class="dts w">당행 예금·신탁·표지어음·CD·RP</text></g>
+<g><rect x="10" y="64" width="340" height="48" rx="9" fill="var(--d3)"/><text x="24" y="84" class="dt b">2순위</text><text x="24" y="104" class="dts">지급보증서·국공채·국가지자체 확정채권·타기관 예금</text></g>
+<g><rect x="10" y="118" width="340" height="48" rx="9" fill="var(--d4)"/><text x="24" y="138" class="dt b">3순위</text><text x="24" y="158" class="dts">부동산·사채·신탁수익권·부분보증서·수익증권</text></g>
+<g><rect x="10" y="172" width="340" height="46" rx="9" fill="var(--d1)"/><text x="24" y="191" class="dt b">4순위</text><text x="24" y="210" class="dts">기계기구·주식·기타</text></g>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑪ 대출금리 구조 (표준형식)</h3>
+<p class="dcap">법적비용에 <b>법인세는 ✗</b>. 조달비용(=기준금리)도 법적비용 아님.</p>
+<svg viewBox="0 0 360 250" class="dsvg" role="img" aria-label="대출금리 구조">
+<rect x="10" y="10" width="340" height="34" rx="7" fill="var(--accent)"/><text x="180" y="32" text-anchor="middle" class="dt w b">기준금리 (MOR·COFIX = 자금조달비용)</text>
+<text x="180" y="60" text-anchor="middle" class="dts">＋</text>
+<rect x="10" y="66" width="165" height="30" rx="6" fill="var(--d3)"/><text x="92" y="86" text-anchor="middle" class="dts">유동성·리스크 프리미엄</text>
+<rect x="185" y="66" width="165" height="30" rx="6" fill="var(--dwarn2)"/><text x="267" y="82" text-anchor="middle" class="dts w">법적비용: 보증기관</text><text x="267" y="94" text-anchor="middle" class="dts w">출연료·교육세 (법인세✗)</text>
+<rect x="10" y="102" width="165" height="30" rx="6" fill="var(--d3)"/><text x="92" y="122" text-anchor="middle" class="dts">업무원가(인건비·전산)</text>
+<rect x="185" y="102" width="165" height="30" rx="6" fill="var(--d3)"/><text x="267" y="122" text-anchor="middle" class="dts">신용원가(EL+자본비용)</text>
+<rect x="10" y="138" width="340" height="30" rx="6" fill="var(--d4)"/><text x="180" y="158" text-anchor="middle" class="dts">＋ 목표이익률 ± 가감조정 ＋ 한도약정가산</text>
+<rect x="10" y="188" width="340" height="52" rx="10" fill="var(--dwarn)"/>
+<text x="180" y="210" text-anchor="middle" class="dt b">연체금리 = 정상약정금리 ＋ 3%</text>
+<text x="180" y="230" text-anchor="middle" class="dts">최고 15% 초과 불가</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑫ 중도상환해약금 계산</h3>
+<p class="dcap">대출기간이 3년 초과면 3년으로 간주.</p>
+<svg viewBox="0 0 360 170" class="dsvg" role="img" aria-label="중도상환해약금 계산">
+<rect x="10" y="20" width="340" height="44" rx="10" fill="var(--d2)"/>
+<text x="180" y="40" text-anchor="middle" class="dt b">원금 × 요율 × (잔여기간 ÷ 대출기간)</text>
+<text x="180" y="58" text-anchor="middle" class="dts">가계 부동산 고정 1.4% / 변동 1.2%</text>
+<text x="180" y="90" text-anchor="middle" class="dts">예: 1,000만 × 1.4% × (40 ÷ 80)</text>
+<rect x="70" y="106" width="220" height="44" rx="10" fill="var(--accent)"/>
+<text x="180" y="134" text-anchor="middle" class="dt w b">= 70,000원</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑬ 채무인수 4종류</h3>
+<p class="dcap">면책적은 보통저당권化 → 습용·유용 ✗ (기한연기·면책적 인수만).</p>
+<div class="dtable">
+<table>
+<tr><th>종류</th><th>특징</th><th>징구서류</th></tr>
+<tr><td>확정채무 면책적</td><td>구채무자 면책, 보통저당권化</td><td>약정서+변경계약서(면책적)</td></tr>
+<tr><td>중첩적 채무인수</td><td>추가 채무자, 등기 불요</td><td>약정서만</td></tr>
+<tr><td>계약인수</td><td>지위 이전, 신규·증액 O</td><td>약정서+변경계약서(계약인수)</td></tr>
+<tr><td>중첩적 계약인수</td><td>지위 중첩 인수</td><td>변경계약서(중첩적 계약인수)</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dcard">
+<h3>⑭ 상계금지 예금 (압류금지 채권)</h3>
+<p class="dcap">"병사의 급료" ✗ 이지만 병사의 정기예금·주택청약예금은 상계 가능.</p>
+<svg viewBox="0 0 360 210" class="dsvg" role="img" aria-label="상계금지 예금">
+<rect x="10" y="10" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="92" y="34" text-anchor="middle" class="dts">부양료·유족부조료</text>
+<rect x="185" y="10" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="267" y="34" text-anchor="middle" class="dts">구호수입</text>
+<rect x="10" y="56" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="92" y="80" text-anchor="middle" class="dts">병사의 급료</text>
+<rect x="185" y="56" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="267" y="74" text-anchor="middle" class="dts">급여·연금·퇴직연금</text><text x="267" y="90" text-anchor="middle" class="dt b">1/2</text>
+<rect x="10" y="102" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="92" y="120" text-anchor="middle" class="dts">퇴직금</text><text x="92" y="136" text-anchor="middle" class="dt b">1/2</text>
+<rect x="185" y="102" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="267" y="126" text-anchor="middle" class="dts">주임법 우선변제금</text>
+<rect x="10" y="148" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="92" y="172" text-anchor="middle" class="dts">보장성보험금</text>
+<rect x="185" y="148" width="165" height="40" rx="8" fill="var(--dwarn2)"/><text x="267" y="166" text-anchor="middle" class="dts w">생계비 예금</text><text x="267" y="182" text-anchor="middle" class="dt w b">1개월분</text>
+</svg>
+</div>
+
+</div>
+</section><section class="subpanel" id="c-s0"><h2>제1장 여신의 개요</h2>
 <h3>제1절 여신의 개념 (p.13~21)</h3>
 <p><strong>1. 여신의 개념</strong></p>
 <div class="tscroll"><table>
@@ -4186,14 +4410,14 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="기출 포인트"></td>
 </tr>
 </tbody>
-</table></div></section></section>
-<section class="panel" id="p1"><blockquote>
+</table></div></section></section><section class="panel" id="p1"><blockquote>
 <p><strong>보는 법</strong>
 - 각 UNIT은 <code>한눈에 보기(표)</code> → <code>꼭 외울 숫자</code> → <code>연결 예상문제</code> 순서입니다.
 - <span class="tier t3">🔴</span> 복기·기출 반복(반드시) / <span class="tier t2">🟠</span> 기출 1회·적중문제 / <span class="tier t1">🟢</span> 교재 연습문제 수준
 - 표 안의 <strong>굵은 글씨</strong>가 시험에서 바뀌어 나오는 단어(숫자·기간·주체), ✗ 표시는 자주 나오는 오답 선지입니다.</p>
 </blockquote>
-<hr /><div class="chips"><button class="chip active" data-grp="__all">전체</button><button class="chip" data-grp="PART 1 — 1권 (여신 I)">PART 1 — 1권 (여신 I)</button><button class="chip" data-grp="PART 2 — 2권 (여신 II)">PART 2 — 2권 (여신 II)</button></div><div class="subtabs"><button class="subtab active" data-sub="s-s0" data-group="PART 1 — 1권 (여신 I)">0. 시험 한 장 요약</button><button class="subtab" data-sub="s-s1" data-group="PART 1 — 1권 (여신 I)">UNIT 01 🔴 여신의 개념·용어</button><button class="subtab" data-sub="s-s2" data-group="PART 1 — 1권 (여신 I)">UNIT 02 🟠 여신의 분류·상품</button><button class="subtab" data-sub="s-s3" data-group="PART 1 — 1권 (여신 I)">UNIT 03 🔴 여신운용원칙</button><button class="subtab" data-sub="s-s4" data-group="PART 1 — 1권 (여신 I)">UNIT 04 🔴 은행법 규제</button><button class="subtab" data-sub="s-s5" data-group="PART 1 — 1권 (여신 I)">UNIT 05 🔴 민법</button><button class="subtab" data-sub="s-s6" data-group="PART 1 — 1권 (여신 I)">UNIT 06 🟠 중소기업기본법</button><button class="subtab" data-sub="s-s7" data-group="PART 1 — 1권 (여신 I)">UNIT 07 🔴 예금의 구속행위</button><button class="subtab" data-sub="s-s8" data-group="PART 1 — 1권 (여신 I)">UNIT 08 🔴 주택관련대출 리스크관리</button><button class="subtab" data-sub="s-s9" data-group="PART 1 — 1권 (여신 I)">UNIT 09 🔴 채무관계자</button><button class="subtab" data-sub="s-s10" data-group="PART 1 — 1권 (여신 I)">UNIT 10 🔴 약관 총론</button><button class="subtab" data-sub="s-s11" data-group="PART 1 — 1권 (여신 I)">UNIT 11 🔴 여신거래기본약관</button><button class="subtab" data-sub="s-s12" data-group="PART 2 — 2권 (여신 II)">UNIT 12 🔴 약정서·담보약정서</button><button class="subtab" data-sub="s-s13" data-group="PART 2 — 2권 (여신 II)">UNIT 13 🔴 담보취득원칙·정규담보·LTV</button><button class="subtab" data-sub="s-s14" data-group="PART 2 — 2권 (여신 II)">UNIT 14 🔴 담보권에 우선하는 채권</button><button class="subtab" data-sub="s-s15" data-group="PART 2 — 2권 (여신 II)">UNIT 15 🔴 근담보 운용·관리·화재보험</button><button class="subtab" data-sub="s-s16" data-group="PART 2 — 2권 (여신 II)">UNIT 16 🔴 근저당권 습용·유용·변경</button><button class="subtab" data-sub="s-s17" data-group="PART 2 — 2권 (여신 II)">UNIT 17 🔴 부동산·예금·보증서 담보</button><button class="subtab" data-sub="s-s18" data-group="PART 2 — 2권 (여신 II)">UNIT 18 🔴 감정평가</button><button class="subtab" data-sub="s-s19" data-group="PART 2 — 2권 (여신 II)">UNIT 19 🔴 대출금리</button><button class="subtab" data-sub="s-s20" data-group="PART 2 — 2권 (여신 II)">UNIT 20 🔴 제비용·심사·전결·약정·사후관리</button><button class="subtab" data-sub="s-s21" data-group="PART 2 — 2권 (여신 II)">UNIT 21 ⚠ 구판 자료 vs 현행 교재(9판) — 시험은 현행 기준</button><button class="subtab" data-sub="s-s22" data-group="PART 2 — 2권 (여신 II)">📎 부록 A. 진위형 함정 60선</button><button class="subtab" data-sub="s-s23" data-group="PART 2 — 2권 (여신 II)">📎 부록 B. &quot;아닌 것&quot; 세트 — 끼어드는 오답 한눈에</button></div><section class="subpanel active" id="s-s0"><h2>0. 시험 한 장 요약</h2>
+<hr />
+<h2>0. 시험 한 장 요약</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -4266,7 +4490,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tr>
 </tbody>
 </table></div>
-<hr /></section><section class="subpanel" id="s-s1"><h2>UNIT 01 <span class="tier t3">🔴</span> 여신의 개념·용어</h2>
+<hr /><div class="chips"><button class="chip active" data-grp="__all">전체</button><button class="chip" data-grp="PART 1 — 1권 (여신 I)">PART 1 — 1권 (여신 I)</button><button class="chip" data-grp="PART 2 — 2권 (여신 II)">PART 2 — 2권 (여신 II)</button></div><div class="subtabs"><button class="subtab active" data-sub="s-s0" data-group="PART 1 — 1권 (여신 I)">UNIT 01 🔴 여신의 개념·용어</button><button class="subtab" data-sub="s-s1" data-group="PART 1 — 1권 (여신 I)">UNIT 02 🟠 여신의 분류·상품</button><button class="subtab" data-sub="s-s2" data-group="PART 1 — 1권 (여신 I)">UNIT 03 🔴 여신운용원칙</button><button class="subtab" data-sub="s-s3" data-group="PART 1 — 1권 (여신 I)">UNIT 04 🔴 은행법 규제</button><button class="subtab" data-sub="s-s4" data-group="PART 1 — 1권 (여신 I)">UNIT 05 🔴 민법</button><button class="subtab" data-sub="s-s5" data-group="PART 1 — 1권 (여신 I)">UNIT 06 🟠 중소기업기본법</button><button class="subtab" data-sub="s-s6" data-group="PART 1 — 1권 (여신 I)">UNIT 07 🔴 예금의 구속행위</button><button class="subtab" data-sub="s-s7" data-group="PART 1 — 1권 (여신 I)">UNIT 08 🔴 주택관련대출 리스크관리</button><button class="subtab" data-sub="s-s8" data-group="PART 1 — 1권 (여신 I)">UNIT 09 🔴 채무관계자</button><button class="subtab" data-sub="s-s9" data-group="PART 1 — 1권 (여신 I)">UNIT 10 🔴 약관 총론</button><button class="subtab" data-sub="s-s10" data-group="PART 1 — 1권 (여신 I)">UNIT 11 🔴 여신거래기본약관</button><button class="subtab" data-sub="s-s11" data-group="PART 1 — 1권 (여신 I)">UNIT 12 🔴 약정서·담보약정서</button><button class="subtab" data-sub="s-s12" data-group="PART 2 — 2권 (여신 II)">UNIT 13 🔴 담보취득원칙·정규담보·LTV</button><button class="subtab" data-sub="s-s13" data-group="PART 2 — 2권 (여신 II)">UNIT 14 🔴 담보권에 우선하는 채권</button><button class="subtab" data-sub="s-s14" data-group="PART 2 — 2권 (여신 II)">UNIT 15 🔴 근담보 운용·관리·화재보험</button><button class="subtab" data-sub="s-s15" data-group="PART 2 — 2권 (여신 II)">UNIT 16 🔴 근저당권 습용·유용·변경</button><button class="subtab" data-sub="s-s16" data-group="PART 2 — 2권 (여신 II)">UNIT 17 🔴 부동산·예금·보증서 담보</button><button class="subtab" data-sub="s-s17" data-group="PART 2 — 2권 (여신 II)">UNIT 18 🔴 감정평가</button><button class="subtab" data-sub="s-s18" data-group="PART 2 — 2권 (여신 II)">UNIT 19 🔴 대출금리</button><button class="subtab" data-sub="s-s19" data-group="PART 2 — 2권 (여신 II)">UNIT 20 🔴 제비용·심사·전결·약정·사후관리</button><button class="subtab" data-sub="s-s20" data-group="PART 2 — 2권 (여신 II)">UNIT 21 ⚠ 구판 자료 vs 현행 교재(9판) — 시험은 현행 기준</button><button class="subtab" data-sub="s-s21" data-group="PART 2 — 2권 (여신 II)">📎 부록 A. 진위형 함정 60선</button><button class="subtab" data-sub="s-s22" data-group="PART 2 — 2권 (여신 II)">📎 부록 B. &quot;아닌 것&quot; 세트 — 끼어드는 오답 한눈에</button></div><section class="subpanel active" id="s-s0"><h2>UNIT 01 <span class="tier t3">🔴</span> 여신의 개념·용어</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -4335,7 +4559,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </table></div>
 <p><strong>숫자</strong> 농업인: 농지 <strong>1,000㎡</strong> · 연 <strong>90일</strong> · 시설원예 330㎡ · 채소과수화훼 660㎡ · 잠종 0.5상자 | 재심사청구 <strong>30일</strong>
 <strong>연결</strong> 1권 1~5 · 31~35 · 88~89</p>
-<hr /></section><section class="subpanel" id="s-s2"><h2>UNIT 02 <span class="tier t2">🟠</span> 여신의 분류·상품</h2>
+<hr /></section><section class="subpanel" id="s-s1"><h2>UNIT 02 <span class="tier t2">🟠</span> 여신의 분류·상품</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -4400,7 +4624,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 36~39 · 86~87</p>
-<hr /></section><section class="subpanel" id="s-s3"><h2>UNIT 03 <span class="tier t3">🔴</span> 여신운용원칙</h2>
+<hr /></section><section class="subpanel" id="s-s2"><h2>UNIT 03 <span class="tier t3">🔴</span> 여신운용원칙</h2>
 <p><code>[취급 전] 여신영업·상담 → 여신신청접수
 [취급]    차주현황조사 → 신용평가 → 법규·정책검토 → 담보평가 → 조건결정 → 의사결정(부결도 통지) → 실행
 [취급 후] 사후관리(여신감리 Loan Review) → 회수(기한연장)</code></p>
@@ -4443,7 +4667,7 @@ details.ans summary::-webkit-details-marker{display:none}
 <li>건전성 유지 이유: 수익원천 · 자산건전성분류(부실 <strong>사전</strong> 차단) · 공공성·<strong>신뢰성</strong> ("감독규제 때문" ✗)</li>
 </ul>
 <p><strong>연결</strong> 1권 6~7 · 40~42</p>
-<hr /></section><section class="subpanel" id="s-s4"><h2>UNIT 04 <span class="tier t3">🔴</span> 은행법 규제</h2>
+<hr /></section><section class="subpanel" id="s-s3"><h2>UNIT 04 <span class="tier t3">🔴</span> 은행법 규제</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -4533,7 +4757,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </table></div>
 <p><strong>금소법 불공정영업행위</strong>: 끼워팔기 / 포괄근담보 요구 / <strong>고용임원 연대입보</strong>(부득이 불문) / 3년 이내 아닌데 중도상환해약금 / 제3자 연대보증(예외: 분양사업자·시공사, 대표이사·무한책임사원·최다지분·30%↑ 보유자, 기업집단, PF 이익공유법인, 조합대표) / 과태료 7,000만(직원 3,500만)</p>
 <p><strong>연결</strong> 1권 8~11 · 43~45 · 93~94</p>
-<hr /></section><section class="subpanel" id="s-s5"><h2>UNIT 05 <span class="tier t3">🔴</span> 민법</h2>
+<hr /></section><section class="subpanel" id="s-s4"><h2>UNIT 05 <span class="tier t3">🔴</span> 민법</h2>
 <h3>자연인·의사표시</h3>
 <div class="tscroll"><table>
 <thead>
@@ -4694,7 +4918,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 12~19 · 46~49 · 90~92</p>
-<hr /></section><section class="subpanel" id="s-s6"><h2>UNIT 06 <span class="tier t2">🟠</span> 중소기업기본법</h2>
+<hr /></section><section class="subpanel" id="s-s5"><h2>UNIT 06 <span class="tier t2">🟠</span> 중소기업기본법</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -4760,7 +4984,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 20 · 50~51</p>
-<hr /></section><section class="subpanel" id="s-s7"><h2>UNIT 07 <span class="tier t3">🔴</span> 예금의 구속행위(꺾기)</h2>
+<hr /></section><section class="subpanel" id="s-s6"><h2>UNIT 07 <span class="tier t3">🔴</span> 예금의 구속행위(꺾기)</h2>
 <h3>간주규제 표 — 여신실행일 <strong>전후 1개월</strong>, 노란우산 월수입 <strong>여신금액 1%</strong></h3>
 <div class="tscroll"><table>
 <thead>
@@ -4958,7 +5182,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 21~24 · 52~58 · 95~96</p>
-<hr /></section><section class="subpanel" id="s-s8"><h2>UNIT 08 <span class="tier t3">🔴</span> 주택관련대출 리스크관리</h2>
+<hr /></section><section class="subpanel" id="s-s7"><h2>UNIT 08 <span class="tier t3">🔴</span> 주택관련대출 리스크관리</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -5104,7 +5328,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 25~26 · 59~62 · 97</p>
-<hr /></section><section class="subpanel" id="s-s9"><h2>UNIT 09 <span class="tier t3">🔴</span> 채무관계자</h2>
+<hr /></section><section class="subpanel" id="s-s8"><h2>UNIT 09 <span class="tier t3">🔴</span> 채무관계자</h2>
 <h3>구분·거래방법</h3>
 <div class="tscroll"><table>
 <thead>
@@ -5310,7 +5534,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 27~28 · 63~74 · 98</p>
-<hr /></section><section class="subpanel" id="s-s10"><h2>UNIT 10 <span class="tier t3">🔴</span> 약관 총론</h2>
+<hr /></section><section class="subpanel" id="s-s9"><h2>UNIT 10 <span class="tier t3">🔴</span> 약관 총론</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -5358,7 +5582,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 29 · 75~78 · 99</p>
-<hr /></section><section class="subpanel" id="s-s11"><h2>UNIT 11 <span class="tier t3">🔴</span> 여신거래기본약관</h2>
+<hr /></section><section class="subpanel" id="s-s10"><h2>UNIT 11 <span class="tier t3">🔴</span> 여신거래기본약관</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -5512,7 +5736,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </table></div>
 <p><strong>가계용 특유</strong>: 9조 기한전 임의상환 / 3조 9항 금리변경요구권 / <strong>대출계약 철회 14일</strong>(서류수령일·실행일부터, 원리금+부대비용 반환 시 효력, <strong>수수료 3영업일 내 반환</strong>, 횟수 제한 ✗, 지급보증 제외)</p>
 <p><strong>연결</strong> 1권 30 · 79~83 · 100</p>
-<hr /></section><section class="subpanel" id="s-s12"><h2>UNIT 12 <span class="tier t3">🔴</span> 약정서·담보약정서</h2>
+<hr /></section><section class="subpanel" id="s-s11"><h2>UNIT 12 <span class="tier t3">🔴</span> 약정서·담보약정서</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -5667,7 +5891,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 1권 84~85</p>
-<hr /></section><section class="subpanel" id="s-s13"><h2>UNIT 13 <span class="tier t3">🔴</span> 담보취득원칙·정규담보·LTV</h2>
+<hr /></section><section class="subpanel" id="s-s12"><h2>UNIT 13 <span class="tier t3">🔴</span> 담보취득원칙·정규담보·LTV</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -5797,7 +6021,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 1~9 · 31~38</p>
-<hr /></section><section class="subpanel" id="s-s14"><h2>UNIT 14 <span class="tier t3">🔴</span> 담보권에 우선하는 채권</h2>
+<hr /></section><section class="subpanel" id="s-s13"><h2>UNIT 14 <span class="tier t3">🔴</span> 담보권에 우선하는 채권</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -5977,7 +6201,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 10~16 · 39~46 · 90</p>
-<hr /></section><section class="subpanel" id="s-s15"><h2>UNIT 15 <span class="tier t3">🔴</span> 근담보 운용·관리·화재보험</h2>
+<hr /></section><section class="subpanel" id="s-s14"><h2>UNIT 15 <span class="tier t3">🔴</span> 근담보 운용·관리·화재보험</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -6050,7 +6274,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 17~19 · 47~50 · 91~93</p>
-<hr /></section><section class="subpanel" id="s-s16"><h2>UNIT 16 <span class="tier t3">🔴</span> 근저당권 습용·유용·변경</h2>
+<hr /></section><section class="subpanel" id="s-s15"><h2>UNIT 16 <span class="tier t3">🔴</span> 근저당권 습용·유용·변경</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -6116,7 +6340,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 20 · 51~53</p>
-<hr /></section><section class="subpanel" id="s-s17"><h2>UNIT 17 <span class="tier t3">🔴</span> 부동산·예금·보증서 담보</h2>
+<hr /></section><section class="subpanel" id="s-s16"><h2>UNIT 17 <span class="tier t3">🔴</span> 부동산·예금·보증서 담보</h2>
 <h3>부동산 취득 가능 여부</h3>
 <div class="tscroll"><table>
 <thead>
@@ -6302,7 +6526,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 21~24 · 54~66 · 94</p>
-<hr /></section><section class="subpanel" id="s-s18"><h2>UNIT 18 <span class="tier t3">🔴</span> 감정평가</h2>
+<hr /></section><section class="subpanel" id="s-s17"><h2>UNIT 18 <span class="tier t3">🔴</span> 감정평가</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -6419,7 +6643,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 25 · 67~73</p>
-<hr /></section><section class="subpanel" id="s-s19"><h2>UNIT 19 <span class="tier t3">🔴</span> 대출금리</h2>
+<hr /></section><section class="subpanel" id="s-s18"><h2>UNIT 19 <span class="tier t3">🔴</span> 대출금리</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -6522,7 +6746,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 26~27 · 74~79 · 87 · 94~95</p>
-<hr /></section><section class="subpanel" id="s-s20"><h2>UNIT 20 <span class="tier t3">🔴</span> 제비용·심사·전결·약정·사후관리</h2>
+<hr /></section><section class="subpanel" id="s-s19"><h2>UNIT 20 <span class="tier t3">🔴</span> 제비용·심사·전결·약정·사후관리</h2>
 <h3>제비용</h3>
 <div class="tscroll"><table>
 <thead>
@@ -6797,7 +7021,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tbody>
 </table></div>
 <p><strong>연결</strong> 2권 28~30 · 80~85 · 86~89 · 96~100</p>
-<hr /></section><section class="subpanel" id="s-s21"><h2>UNIT 21 ⚠ 구판 자료 vs 현행 교재(9판) — 시험은 현행 기준</h2>
+<hr /></section><section class="subpanel" id="s-s20"><h2>UNIT 21 ⚠ 구판 자료 vs 현행 교재(9판) — 시험은 현행 기준</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -6844,7 +7068,7 @@ details.ans summary::-webkit-details-marker{display:none}
 </tr>
 </tbody>
 </table></div>
-<hr /></section><section class="subpanel" id="s-s22"><h2>📎 부록 A. 진위형 함정 60선 (정답만 빠르게)</h2>
+<hr /></section><section class="subpanel" id="s-s21"><h2>📎 부록 A. 진위형 함정 60선 (정답만 빠르게)</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -7155,7 +7379,7 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="정답">✗</td>
 </tr>
 </tbody>
-</table></div></section><section class="subpanel" id="s-s23"><h2>📎 부록 B. "아닌 것" 세트 — 끼어드는 오답 한눈에</h2>
+</table></div></section><section class="subpanel" id="s-s22"><h2>📎 부록 B. "아닌 것" 세트 — 끼어드는 오답 한눈에</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
@@ -7361,11 +7585,10 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="끼어드는 오답">계약인수용</td>
 </tr>
 </tbody>
-</table></div></section></section>
-<section class="panel" id="p2"><div id="q1"><blockquote>
+</table></div></section></section><section class="panel" id="p2"><div id="q1"><blockquote>
 <p>문제 아래 <strong>▶ 정답·해설</strong>을 누르면 펼쳐집니다(GitHub·Obsidian·Typora 등 지원). 맨 끝에 정답 한눈에 표.<br />
 구성: 진위형 30 (Q1~30) · 선다형 55 (Q31~85, 5지선다 포함) · 단답/계산 15 (Q86~100). p.는 교재 9판 PDF 페이지.</p>
-</blockquote><div class="toolbar"><button class="btn" onclick="toggleAll('q1',true)">정답 모두 펼치기</button> <button class="btn" onclick="toggleAll('q1',false)">정답 모두 접기</button> <label class="chk"><input type="checkbox" onchange="starFilter('q1',this.checked)"> 복기 문제만</label></div><div class="subtabs"><button class="subtab active" data-sub="q1-s0">진위형</button><button class="subtab" data-sub="q1-s1">선다형</button><button class="subtab" data-sub="q1-s2">단답·계산형</button><button class="subtab" data-sub="q1-skey">정답 한눈에</button></div><section class="subpanel active qwrap" id="q1-s0"><article class="q is-star" id="q1-q1">
+</blockquote><div class="toolbar"><button class="btn" data-act="open" data-key="q1">정답 모두 펼치기</button> <button class="btn" data-act="close" data-key="q1">정답 모두 접기</button> <label class="chk"><input type="checkbox" data-star="q1"> 복기 문제만</label></div><div class="subtabs"><button class="subtab active" data-sub="q1-s0">진위형</button><button class="subtab" data-sub="q1-s1">선다형</button><button class="subtab" data-sub="q1-s2">단답·계산형</button><button class="subtab" data-sub="q1-skey">정답 한눈에</button></div><section class="subpanel active qwrap" id="q1-s0"><article class="q is-star" id="q1-q1">
 <div class="qhead"><span class="qnum">1</span><span class="star">🔴 복기</span></div>
 <div class="stem"><p>지급보증은 은행의 자금이 차주에게 직접 제공되지 않으므로 여신에 해당하지 않는다. ( )</p></div>
 
@@ -8164,11 +8387,10 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="100">대리환급 변제충당</td>
 </tr>
 </tbody>
-</table></div></section></div></section>
-<section class="panel" id="p3"><div id="q2"><blockquote>
+</table></div></section></div></section><section class="panel" id="p3"><div id="q2"><blockquote>
 <p>문제 아래 <strong>▶ 정답·해설</strong>을 누르면 펼쳐집니다(GitHub·Obsidian·Typora 등 지원). 맨 끝에 정답 한눈에 표.<br />
 구성: 진위형 30 (Q1~30) · 선다형 55 (Q31~85, 5지선다 포함) · 단답/계산 15 (Q86~100). p.는 교재 9판 PDF 페이지.</p>
-</blockquote><div class="toolbar"><button class="btn" onclick="toggleAll('q2',true)">정답 모두 펼치기</button> <button class="btn" onclick="toggleAll('q2',false)">정답 모두 접기</button> <label class="chk"><input type="checkbox" onchange="starFilter('q2',this.checked)"> 복기 문제만</label></div><div class="subtabs"><button class="subtab active" data-sub="q2-s0">진위형</button><button class="subtab" data-sub="q2-s1">선다형</button><button class="subtab" data-sub="q2-s2">단답·계산형</button><button class="subtab" data-sub="q2-skey">정답 한눈에</button></div><section class="subpanel active qwrap" id="q2-s0"><article class="q" id="q2-q1">
+</blockquote><div class="toolbar"><button class="btn" data-act="open" data-key="q2">정답 모두 펼치기</button> <button class="btn" data-act="close" data-key="q2">정답 모두 접기</button> <label class="chk"><input type="checkbox" data-star="q2"> 복기 문제만</label></div><div class="subtabs"><button class="subtab active" data-sub="q2-s0">진위형</button><button class="subtab" data-sub="q2-s1">선다형</button><button class="subtab" data-sub="q2-s2">단답·계산형</button><button class="subtab" data-sub="q2-skey">정답 한눈에</button></div><section class="subpanel active qwrap" id="q2-s0"><article class="q" id="q2-q1">
 <div class="qhead"><span class="qnum">1</span></div>
 <div class="stem"><p>담보는 여신실행 전에 취득하는 것이 원칙이나, 여신상품 등에서 달리 정한 경우에는 담보취득 전에 여신을 실행할 수 있다. ( )</p></div>
 
@@ -8967,8 +9189,7 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="100">3년 / 5년</td>
 </tr>
 </tbody>
-</table></div></section></div></section>
-<section class="panel" id="p4"><blockquote>
+</table></div></section></div></section><section class="panel" id="p4"><blockquote>
 <p>복기 한 줄이 실제로 어떤 규정(교재 9판)을 묻는 것인지, 그리고 어느 예상문제로 연습할 수 있는지 연결한 표입니다.</p>
 </blockquote>
 <h2>A. 동기 복기 (최신 시험)</h2>
@@ -9322,38 +9543,65 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="현행">규제지역 40% / 자율 50% / 전국 100%</td>
 </tr>
 </tbody>
-</table></div></section>
-</main>
-<a id="top" href="#" title="맨 위로">▲</a>
+</table></div></section></main><a id="top" href="#" title="맨 위로">▲</a>
 <script>
-function show(p){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.p===p));document.querySelectorAll('.panel').forEach(s=>s.classList.toggle('active',s.id===p));try{localStorage.setItem('tab',p)}catch(e){}window.scrollTo(0,0);}
-document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>show(b.dataset.p));
-// sub-tabs
-document.querySelectorAll('.subtab').forEach(b=>b.onclick=function(){
-  var wrap=b.closest('.panel');
-  wrap.querySelectorAll('.subtab').forEach(x=>x.classList.toggle('active',x===b));
-  var id=b.dataset.sub;
-  wrap.querySelectorAll('.subpanel').forEach(s=>s.classList.toggle('active',s.id===id));
-  var bar=b.closest('.subtabs'); if(bar){b.scrollIntoView({inline:'center',block:'nearest'});}
-  window.scrollTo(0,wrap.getBoundingClientRect().top+window.scrollY-80);
-});
-// group chips (제1권/제2권 filter of subtabs)
-document.querySelectorAll('.chip').forEach(c=>c.onclick=function(){
-  var panel=c.closest('.panel'); var g=c.dataset.grp;
-  panel.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===c));
-  var subs=panel.querySelectorAll('.subtab'); var firstVisible=null;
-  subs.forEach(s=>{var show=(g==='__all'||s.dataset.group===g);s.style.display=show?'':'none';if(show&&!firstVisible)firstVisible=s;});
-  if(firstVisible) firstVisible.click();
-});
-function toggleAll(key,open){document.querySelectorAll('#'+key+' .subpanel.active details.ans').forEach(d=>d.open=open);}
-function starFilter(key,on){document.getElementById(key).classList.toggle('star-only',on);}
-// theme
-var tb=document.getElementById('themebtn');
-function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}}
-tb.onclick=function(){var cur=document.documentElement.getAttribute('data-theme');applyTheme(cur==='dark'?'light':'dark');};
-try{var st=localStorage.getItem('theme');if(st)applyTheme(st);var tp=localStorage.getItem('tab');if(tp)show(tp);}catch(e){}
-// back to top
-var top=document.getElementById('top');
-window.addEventListener('scroll',()=>{top.style.opacity=window.scrollY>400?'1':'0';});
-top.onclick=e=>{e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});};
-</script></body></html>
+(function(){
+  function qsa(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+  function show(p){
+    qsa('.tab').forEach(function(b){b.classList.toggle('active',b.dataset.p===p);});
+    qsa('.panel').forEach(function(s){s.classList.toggle('active',s.id===p);});
+    try{localStorage.setItem('tab',p);}catch(e){}
+    window.scrollTo(0,0);
+  }
+  qsa('.tab').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.p);});});
+  qsa('.subtab').forEach(function(b){
+    b.addEventListener('click',function(){
+      var wrap=b.closest('.panel');
+      qsa('.subtab',wrap).forEach(function(x){x.classList.toggle('active',x===b);});
+      var id=b.dataset.sub;
+      qsa('.subpanel',wrap).forEach(function(s){s.classList.toggle('active',s.id===id);});
+      try{b.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+      var y=wrap.getBoundingClientRect().top+window.scrollY-84;
+      window.scrollTo(0,y<0?0:y);
+    });
+  });
+  qsa('.chip').forEach(function(c){
+    c.addEventListener('click',function(){
+      var panel=c.closest('.panel'); var g=c.dataset.grp;
+      qsa('.chip',panel).forEach(function(x){x.classList.toggle('active',x===c);});
+      var first=null;
+      qsa('.subtab',panel).forEach(function(s){
+        var vis=(g==='__all'||s.dataset.group===g);
+        s.style.display=vis?'':'none'; if(vis&&!first)first=s;
+      });
+      if(first)first.click();
+    });
+  });
+  document.addEventListener('click',function(e){
+    if(!e.target.closest) return;
+    var sm=e.target.closest('details.ans>summary');
+    if(sm){ e.preventDefault(); var d=sm.parentNode; d.open=!d.open; return; }
+    var t=e.target.closest('[data-act]');
+    if(t){
+      var key=t.getAttribute('data-key');
+      var open=t.getAttribute('data-act')==='open';
+      qsa('#'+key+' .subpanel.active details.ans').forEach(function(d){d.open=open;});
+    }
+  });
+  document.addEventListener('change',function(e){
+    if(!e.target.closest) return;
+    var cb=e.target.closest('input[data-star]');
+    if(!cb) return;
+    var box=document.getElementById(cb.getAttribute('data-star'));
+    if(box) box.classList.toggle('star-only',cb.checked);
+  });
+  var tb=document.getElementById('themebtn');
+  function applyTheme(t){document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem('theme',t);}catch(e){}}
+  if(tb)tb.addEventListener('click',function(){var cur=document.documentElement.getAttribute('data-theme');applyTheme(cur==='dark'?'light':'dark');});
+  try{var st=localStorage.getItem('theme');if(st)applyTheme(st);var tp=localStorage.getItem('tab');if(tp)show(tp);}catch(e){}
+  var top=document.getElementById('top');
+  window.addEventListener('scroll',function(){var on=window.scrollY>400;top.style.opacity=on?'1':'0';top.style.pointerEvents=on?'auto':'none';});
+  top.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
+})();
+</script>
+</body></html>
