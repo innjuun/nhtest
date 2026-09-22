@@ -82,6 +82,7 @@ details.ans summary::-webkit-details-marker{display:none}
 @media print{header,.subtabs,.chips,.toolbar,#top{display:none}.panel,.subpanel{display:block!important}details.ans{display:block}details.ans summary{display:none}details.ans .ansbody{display:block}article.q{break-inside:avoid}}
 
 /* diagram gallery */
+.dsec{grid-column:1/-1;font-weight:800;font-size:15px;color:var(--ink);background:var(--th);border-radius:8px;padding:7px 12px;margin-top:4px}
 .diags{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .dcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;overflow:hidden}
 .dcard h3{margin:2px 0 4px;font-size:15.5px;color:var(--accent)}
@@ -111,6 +112,7 @@ details.ans summary::-webkit-details-marker{display:none}
 - 페이지는 교재 PDF 기준입니다.</p>
 </blockquote>
 <hr /><div class="chips"><button class="chip active" data-grp="__all">전체</button><button class="chip" data-grp="제1권 여신 I">제1권 여신 I</button><button class="chip" data-grp="제2권 여신 II">제2권 여신 II</button></div><div class="subtabs"><button class="subtab active" data-sub="c-diag" data-group="__viz">🖼 그림으로 이해</button><button class="subtab" data-sub="c-s0" data-group="제1권 여신 I">제1장 여신의 개요</button><button class="subtab" data-sub="c-s1" data-group="제1권 여신 I">제2장 여신운용원칙</button><button class="subtab" data-sub="c-s2" data-group="제1권 여신 I">제3장 여신 관련 규제사항</button><button class="subtab" data-sub="c-s3" data-group="제1권 여신 I">제4장 약관 및 약정서</button><button class="subtab" data-sub="c-s4" data-group="제2권 여신 II">제1장 담보규정</button><button class="subtab" data-sub="c-s5" data-group="제2권 여신 II">제2장 대출금리</button><button class="subtab" data-sub="c-s6" data-group="제2권 여신 II">제3장 여신 관련 제비용</button><button class="subtab" data-sub="c-s7" data-group="제2권 여신 II">제4장 여신심사</button><button class="subtab" data-sub="c-s8" data-group="제2권 여신 II">제5장 여신전결권 운용</button><button class="subtab" data-sub="c-s9" data-group="제2권 여신 II">제6장 대출약정과 실행</button><button class="subtab" data-sub="c-s10" data-group="제2권 여신 II">제7장 여신사후관리</button></div><section class="subpanel active" id="c-diag"><div class="diags">
+<div class="dsec">⭐ 핵심 도식</div>
 
 <div class="dcard">
 <h3>① 여신의 범위 — 익스포져 &gt; 신용공여 &gt; 여신</h3>
@@ -322,6 +324,263 @@ details.ans summary::-webkit-details-marker{display:none}
 <rect x="185" y="102" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="267" y="126" text-anchor="middle" class="dts">주임법 우선변제금</text>
 <rect x="10" y="148" width="165" height="40" rx="8" fill="var(--dwarn)"/><text x="92" y="172" text-anchor="middle" class="dts">보장성보험금</text>
 <rect x="185" y="148" width="165" height="40" rx="8" fill="var(--dwarn2)"/><text x="267" y="166" text-anchor="middle" class="dts w">생계비 예금</text><text x="267" y="182" text-anchor="middle" class="dt w b">1개월분</text>
+</svg>
+</div>
+
+<div class="dsec">📕 1권 추가</div>
+
+<div class="dcard">
+<h3>⑮ 여신의 분류 (6기준)</h3>
+<p class="dcap">"통화"는 거래방식이 아님. 모기지론 = 증서·개별·주택·원리금균등·원화·신규.</p>
+<div class="dtable">
+<table>
+<tr><th>기준</th><th>종류</th></tr>
+<tr><td>형식</td><td>어음대출·증서대출·어음할인·당좌대출·지급보증</td></tr>
+<tr><td>거래방식</td><td>개별거래 / 한도거래</td></tr>
+<tr><td>자금용도</td><td>가계·주택·기업·농식품·공공</td></tr>
+<tr><td>상환방법</td><td>일시·원금균등·원리금균등·수시</td></tr>
+<tr><td>통화</td><td class="b">원화 / 외화 (형식·거래방식 ✗)</td></tr>
+<tr><td>취급방법</td><td>신규·재약정·채무인수·조건변경·기한연기</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dcard">
+<h3>⑯ 재약정 구조 — 재대출 vs 대환</h3>
+<p class="dcap">피담보채무가 확정(경매신청·면책적 인수)되면 <b>대환 불가</b>.</p>
+<svg viewBox="0 0 360 210" class="dsvg" role="img" aria-label="재약정 구조">
+<rect x="120" y="8" width="120" height="34" rx="8" fill="var(--accent)"/><text x="180" y="30" text-anchor="middle" class="dt w b">재약정</text>
+<path d="M180 42 L110 66" class="dline"/><path d="M180 42 L250 66" class="dline"/>
+<rect x="20" y="68" width="150" height="60" rx="9" fill="var(--d3)"/>
+<text x="95" y="88" text-anchor="middle" class="dt b">재대출(서환)</text>
+<text x="95" y="106" text-anchor="middle" class="dts">과목·이자율·금액</text>
+<text x="95" y="121" text-anchor="middle" class="dts">불변</text>
+<rect x="190" y="68" width="150" height="60" rx="9" fill="var(--d4)"/>
+<text x="265" y="88" text-anchor="middle" class="dt b">대환</text>
+<text x="265" y="106" text-anchor="middle" class="dts">구채무 소멸</text>
+<text x="265" y="121" text-anchor="middle" class="dts">+ 신채무 발생</text>
+<rect x="20" y="140" width="320" height="58" rx="9" fill="var(--dwarn)"/>
+<text x="180" y="162" text-anchor="middle" class="dt b">대환 불가 케이스</text>
+<text x="180" y="182" text-anchor="middle" class="dts">경매신청 · 면책적 채무인수로 피담보채무 확정 시</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑰ 근저당권 원용·습용·유용</h3>
+<p class="dcap">유용은 <b>무효</b> 등기 재사용 → 이해관계자에 <b>대항 불가</b>.</p>
+<div class="dtable">
+<table>
+<tr><th>구분</th><th>등기 상태</th><th>이해관계자</th></tr>
+<tr><td>원용</td><td>유효(타사무소)</td><td>계약서 양도로 활용</td></tr>
+<tr><td>습용</td><td>유효</td><td class="ok">무관하게 가능</td></tr>
+<tr><td>유용</td><td class="b">무효(미말소)</td><td class="no">대항 불가</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dcard">
+<h3>⑱ 미성년자 이해상반행위 5유형</h3>
+<p class="dcap">모두 <b>특별대리인</b> 필요. "미성년자를 위해 친권자가 보증"은 해당 ✗.</p>
+<svg viewBox="0 0 360 230" class="dsvg" role="img" aria-label="이해상반행위">
+<rect x="10" y="10" width="340" height="30" rx="7" fill="var(--dwarn)"/><text x="180" y="30" text-anchor="middle" class="dts">① 친권자 채무에 미성년자 부동산 담보</text>
+<rect x="10" y="46" width="340" height="30" rx="7" fill="var(--dwarn)"/><text x="180" y="66" text-anchor="middle" class="dts">② 친권자·미성년자 공동소유 부동산 담보 (개별 ✗)</text>
+<rect x="10" y="82" width="340" height="30" rx="7" fill="var(--dwarn)"/><text x="180" y="102" text-anchor="middle" class="dts">③ 친권자 위해 미성년자가 보증</text>
+<rect x="10" y="118" width="340" height="30" rx="7" fill="var(--dwarn)"/><text x="180" y="138" text-anchor="middle" class="dts">④ 친권자 채무를 미성년자가 인수</text>
+<rect x="10" y="154" width="340" height="30" rx="7" fill="var(--dwarn)"/><text x="180" y="174" text-anchor="middle" class="dts">⑤ A 위한 차입에 B(미성년자) 재산 담보</text>
+<rect x="10" y="192" width="340" height="34" rx="8" fill="var(--accent)"/><text x="180" y="214" text-anchor="middle" class="dt w b">→ 특별대리인 (선임심판서 범위)</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑲ 중소기업 매출기준 계단</h3>
+<p class="dcap">1,500억 = 의복·가죽가방·펄프종이·1차금속·전기장비·가구.</p>
+<svg viewBox="0 0 360 200" class="dsvg" role="img" aria-label="중소기업 매출기준">
+<rect x="10" y="20" width="150" height="26" rx="5" fill="var(--accent)"/><text x="165" y="38" class="dt b">1,500억</text><text x="16" y="38" class="dts w">의복·1차금속·가구</text>
+<rect x="10" y="52" width="128" height="26" rx="5" fill="var(--d4)"/><text x="143" y="70" class="dt b">1,000억</text><text x="16" y="70" class="dts w">농림어업·식료품·건설·도소매</text>
+<rect x="10" y="84" width="104" height="26" rx="5" fill="var(--d3)"/><text x="119" y="102" class="dt b">800억</text><text x="16" y="102" class="dts">음료·운수·정보통신</text>
+<rect x="10" y="116" width="80" height="26" rx="5" fill="var(--d3)"/><text x="95" y="134" class="dt b">600억</text><text x="16" y="134" class="dts">전문과학·사업시설</text>
+<rect x="10" y="148" width="56" height="26" rx="5" fill="var(--d2)"/><text x="71" y="166" class="dt b">400억</text><text x="16" y="166" class="dts">숙박음식·금융·부동산</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>⑳ 약관 규제 3종 &amp; 해석 5원칙</h3>
+<p class="dcap">공정위·금감원 사전심사 = 행정적. 인가 없어도 사법상 유효.</p>
+<div class="dtable">
+<table>
+<tr><th>규제 3종</th><th>내용</th></tr>
+<tr><td>입법적</td><td>약관규제법</td></tr>
+<tr><td class="b">행정적</td><td>공정위·금감원 사전심사·시정명령</td></tr>
+<tr><td>사법적</td><td>법원·금융분쟁조정</td></tr>
+</table>
+</div>
+<p class="dcap" style="margin-top:8px">해석 5원칙: 객관적·합리적 / <b>작성자 불리</b> / 제한적(축소) / 신의성실 / <b>개별약정 우선</b></p>
+</div>
+
+<div class="dcard">
+<h3>㉑ 계약편입 요건</h3>
+<p class="dcap">"채용의 합의"만 적극적, 나머지 3개가 소극적.</p>
+<svg viewBox="0 0 360 170" class="dsvg" role="img" aria-label="계약편입 요건">
+<rect x="10" y="14" width="165" height="140" rx="10" fill="var(--d4)"/>
+<text x="92" y="36" text-anchor="middle" class="dt b">적극적 요건</text>
+<rect x="30" y="52" width="125" height="34" rx="7" fill="#fff"/><text x="92" y="74" text-anchor="middle" class="dts" style="fill:#1f2328">채용의 합의</text>
+<rect x="185" y="14" width="165" height="140" rx="10" fill="var(--d2)"/>
+<text x="267" y="36" text-anchor="middle" class="dt b">소극적 요건</text>
+<rect x="205" y="48" width="125" height="28" rx="6" fill="var(--card)"/><text x="267" y="67" text-anchor="middle" class="dts">명시의무</text>
+<rect x="205" y="82" width="125" height="28" rx="6" fill="var(--card)"/><text x="267" y="101" text-anchor="middle" class="dts">사본 교부</text>
+<rect x="205" y="116" width="125" height="28" rx="6" fill="var(--card)"/><text x="267" y="135" text-anchor="middle" class="dts">중요내용 설명</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉒ 기한이익상실 (약관 7조)</h3>
+<p class="dcap">1항 = 모든채무·당연 / 2항 = 당해채무·당연 / 3·4항 = 청구(도달 10일).</p>
+<svg viewBox="0 0 360 210" class="dsvg" role="img" aria-label="기한이익상실">
+<rect x="10" y="10" width="340" height="42" rx="8" fill="var(--dwarn2)"/><text x="20" y="30" class="dt w b">1항 · 모든채무 · 당연</text><text x="20" y="47" class="dts w">압류통지 발송·파산신청·거래정지·폐업</text>
+<rect x="10" y="58" width="340" height="42" rx="8" fill="var(--d4)"/><text x="20" y="78" class="dt b">2항 · 당해채무 · 당연</text><text x="20" y="95" class="dts">기업 이자14일·2회 / 가계 1개월(주담대2)·2회(주담대3)</text>
+<rect x="10" y="106" width="340" height="38" rx="8" fill="var(--d3)"/><text x="20" y="126" class="dt b">3항 · 모든채무 · 청구</text><text x="20" y="141" class="dts">타채무 미변제·경매·허위자료 (도달 10일↑)</text>
+<rect x="10" y="150" width="340" height="38" rx="8" fill="var(--d2)"/><text x="20" y="170" class="dt b">4항 · 당해채무 · 청구</text><text x="20" y="185" class="dts">담보보충·화재보험·보증인 미교체</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉓ 결산기 3형 (5년·3년·14일)</h3>
+<p class="dcap">은행에 편리한 것은 <b>장래지정형</b>.</p>
+<svg viewBox="0 0 360 190" class="dsvg" role="img" aria-label="결산기 3형">
+<text x="10" y="24" class="dt b">지정형</text><rect x="90" y="12" width="200" height="18" rx="4" fill="var(--d3)"/><text x="298" y="26" class="dts">5년 이내</text>
+<text x="10" y="60" class="dt b">자동확정형</text><rect x="90" y="48" width="120" height="18" rx="4" fill="var(--d3)"/><text x="215" y="62" class="dts">3년 경과 시 청구</text>
+<rect x="90" y="70" width="200" height="14" rx="4" fill="var(--d2)"/><text x="298" y="82" class="dts">→ 5년 되는 날</text>
+<text x="10" y="118" class="dt b">장래지정형</text><rect x="90" y="106" width="120" height="18" rx="4" fill="var(--accent)"/><text x="215" y="120" class="dts">3년 후 서면통지</text>
+<rect x="90" y="128" width="90" height="14" rx="4" fill="var(--d4)"/><text x="188" y="140" class="dts">도달 14일</text>
+<rect x="10" y="156" width="340" height="28" rx="7" fill="var(--accent2)"/><text x="180" y="175" text-anchor="middle" class="dts" style="fill:var(--accent);font-weight:700">은행은 장래지정형이 관리에 편리 (자동확정형 ✗)</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉔ 근담보 3종 연기·갱신·대환</h3>
+<p class="dcap">본인 = 특정근·한정근 / 제3자 = 특정근 원칙.</p>
+<div class="dtable">
+<table>
+<tr><th>종류</th><th>연기</th><th>갱신</th><th>대환</th></tr>
+<tr><td>특정채무담보</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+<tr><td>특정근담보</td><td class="ok">○</td><td class="no">✗</td><td class="no">✗</td></tr>
+<tr><td>한정근담보</td><td class="ok">○</td><td class="ok">○</td><td class="b">같은 종류만</td></tr>
+<tr><td>포괄근담보</td><td class="ok">○</td><td class="ok">○</td><td class="ok">○</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dsec">📗 2권 추가</div>
+
+<div class="dcard">
+<h3>㉕ 담보취득 가능여부 3단계</h3>
+<p class="dcap">종중재산·공유지분 건물 = 원칙금지 / 군사시설·도살장 = 제한.</p>
+<svg viewBox="0 0 360 200" class="dsvg" role="img" aria-label="담보취득 3단계">
+<rect x="10" y="10" width="340" height="56" rx="9" fill="var(--dwarn)"/><text x="20" y="30" class="dt b">취득금지 (효력 없음)</text><text x="20" y="48" class="dts">압류·가처분·가등기 / 학교용지 / 학교 직접사용 재산 / 국유 행정재산</text>
+<rect x="10" y="72" width="340" height="56" rx="9" fill="var(--dwarn2)"/><text x="20" y="92" class="dt w b">원칙금지 (승인 예외)</text><text x="20" y="110" class="dts w">종중재산 / 공유지분 건물 / 유흥·안마 1/2↑ / 보전산지 / 댐</text>
+<rect x="10" y="134" width="340" height="56" rx="9" fill="var(--d4)"/><text x="20" y="154" class="dt b">취득제한 (검토의견서)</text><text x="20" y="172" class="dts">공원·체육·유원지 / 도살장·비행장 / 접도구역 / 군사시설보호구역 / 맹지</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉖ 주택 종류 분류</h3>
+<p class="dcap">다세대 = 4개층 이하(3개층 ✗). 공동주택 = 아파트·연립·다세대.</p>
+<div class="dtable">
+<table>
+<tr><th>종류</th><th>면적·층수</th><th>구분등기</th></tr>
+<tr><td>다가구</td><td>660㎡↓·3개층·19세대</td><td class="no">불가(단독)</td></tr>
+<tr><td>다세대</td><td class="b">660㎡↓·4개층↓</td><td class="ok">가능</td></tr>
+<tr><td>연립</td><td>660㎡↑·4개층↓</td><td class="ok">가능</td></tr>
+<tr><td>아파트</td><td>5개층 이상</td><td class="ok">가능</td></tr>
+</table>
+</div>
+</div>
+
+<div class="dcard">
+<h3>㉗ LTV 지역별 계단</h3>
+<p class="dcap">서민실수요자는 우대(최대 4억). 초고가(15억↑) 구입은 0%.</p>
+<svg viewBox="0 0 360 170" class="dsvg" role="img" aria-label="LTV 지역별">
+<g class="dbar"><text x="8" y="30" class="dts">투기·투기과열</text><rect x="130" y="16" width="80" height="20" rx="4" fill="var(--dwarn2)"/><text x="220" y="31" class="dt b">40%</text></g>
+<g class="dbar"><text x="8" y="66" class="dts">조정대상</text><rect x="130" y="52" width="100" height="20" rx="4" fill="var(--d4)"/><text x="240" y="67" class="dt b">50%</text></g>
+<g class="dbar"><text x="8" y="102" class="dts">기타(비규제)</text><rect x="130" y="88" width="140" height="20" rx="4" fill="var(--accent)"/><text x="280" y="103" class="dt b">70%</text></g>
+<rect x="8" y="124" width="344" height="34" rx="8" fill="var(--accent2)"/><text x="180" y="145" text-anchor="middle" class="dts" style="fill:var(--accent);font-weight:700">서민실수요자 60·70% (부부 9천만·주택 9억·무주택)</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉘ 소액임차보증금 차감 흐름</h3>
+<p class="dcap">기준일은 <b>근저당설정 등기일</b>(대항요건일·실행시점 ✗).</p>
+<svg viewBox="0 0 360 190" class="dsvg" role="img" aria-label="소액임차보증금 흐름">
+<rect x="60" y="10" width="240" height="30" rx="7" fill="var(--d3)"/><text x="180" y="30" text-anchor="middle" class="dts">근저당권 설정 등기일 기준</text>
+<path d="M180 40 L180 54" class="dline"/>
+<rect x="60" y="56" width="240" height="30" rx="7" fill="var(--d4)"/><text x="180" y="76" text-anchor="middle" class="dts">소액임차인 = 자연인(외국인 O)·법인 ✗</text>
+<path d="M180 86 L180 100" class="dline"/>
+<rect x="60" y="102" width="240" height="30" rx="7" fill="var(--d3)"/><text x="180" y="122" text-anchor="middle" class="dts">방수: 공동주택 1개 / 단독 3~4개</text>
+<path d="M180 132 L180 146" class="dline"/>
+<rect x="40" y="148" width="280" height="34" rx="8" fill="var(--accent)"/><text x="180" y="170" text-anchor="middle" class="dt w b">한도 = 감정가 × 담보비율 × 50%</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉙ 임금채권 산식</h3>
+<p class="dcap">"합계"임 — 셋 중 가장 큰 금액 ✗. 담보제공자 기준.</p>
+<svg viewBox="0 0 360 160" class="dsvg" role="img" aria-label="임금채권 산식">
+<rect x="10" y="16" width="105" height="46" rx="8" fill="var(--d3)"/><text x="62" y="38" text-anchor="middle" class="dts">최종 3월분</text><text x="62" y="54" text-anchor="middle" class="dt b">임금</text>
+<text x="122" y="44" class="dt b">＋</text>
+<rect x="135" y="16" width="90" height="46" rx="8" fill="var(--d3)"/><text x="180" y="38" text-anchor="middle" class="dts">재해</text><text x="180" y="54" text-anchor="middle" class="dt b">보상금</text>
+<text x="232" y="44" class="dt b">＋</text>
+<rect x="245" y="16" width="105" height="46" rx="8" fill="var(--d3)"/><text x="297" y="38" text-anchor="middle" class="dts">최종 3년분</text><text x="297" y="54" text-anchor="middle" class="dt b">퇴직급여</text>
+<rect x="10" y="78" width="340" height="34" rx="8" fill="var(--d2)"/><text x="180" y="100" text-anchor="middle" class="dts">임금 = 연총급여 × 3/12 × 110%</text>
+<rect x="10" y="118" width="340" height="34" rx="8" fill="var(--dwarn)"/><text x="180" y="140" text-anchor="middle" class="dt b">예외: 최근 1년 임금지연 없음 (6개월·2년 ✗)</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉚ 감정평가 절차 7단계</h3>
+<p class="dcap">기본사항 확정이 먼저, 대상물건 확인은 처리계획 뒤.</p>
+<svg viewBox="0 0 360 250" class="dsvg" role="img" aria-label="감정평가 절차">
+<rect x="70" y="8" width="220" height="26" rx="6" fill="var(--accent)"/><text x="180" y="26" text-anchor="middle" class="dt w b">① 기본사항 확정</text>
+<path d="M180 34 L180 44" class="dline"/>
+<rect x="70" y="46" width="220" height="26" rx="6" fill="var(--d4)"/><text x="180" y="64" text-anchor="middle" class="dts">② 처리계획 수립</text>
+<path d="M180 72 L180 82" class="dline"/>
+<rect x="70" y="84" width="220" height="26" rx="6" fill="var(--d3)"/><text x="180" y="102" text-anchor="middle" class="dts">③ 대상물건 확인</text>
+<path d="M180 110 L180 120" class="dline"/>
+<rect x="70" y="122" width="220" height="26" rx="6" fill="var(--d3)"/><text x="180" y="140" text-anchor="middle" class="dts">④ 자료수집·정리</text>
+<path d="M180 148 L180 158" class="dline"/>
+<rect x="70" y="160" width="220" height="26" rx="6" fill="var(--d3)"/><text x="180" y="178" text-anchor="middle" class="dts">⑤ 자료검토·요인분석</text>
+<path d="M180 186 L180 196" class="dline"/>
+<rect x="70" y="198" width="220" height="26" rx="6" fill="var(--d3)"/><text x="180" y="216" text-anchor="middle" class="dts">⑥ 방법 선정·적용</text>
+<path d="M180 224 L180 234" class="dline"/>
+<rect x="70" y="236" width="220" height="14" rx="4" fill="var(--d2)"/><text x="180" y="247" text-anchor="middle" class="dts">⑦ 가액 결정·표시</text>
+</svg>
+</div>
+
+<div class="dcard">
+<h3>㉛ 기한연기 4유형 &amp; 사망 처리</h3>
+<p class="dcap">한정승인·상속포기는 <b>기한이익상실 후</b> 처리.</p>
+<div class="dtable">
+<table>
+<tr><th>기한연기 유형</th><th>사망 시 처리</th></tr>
+<tr><td>자동(유선 확인)</td><td>단순승인 → 상속인 신규</td></tr>
+<tr><td>일반(서류)</td><td>부동산 → 근저당변경계약</td></tr>
+<tr><td>조건부(10%↑ 상환)</td><td class="b">한정승인 → 상실 후 채권신고</td></tr>
+<tr><td>개별심사</td><td class="b">상속포기 → 상실 후 재산관리인</td></tr>
+</table>
+</div>
+<p class="dcap" style="margin-top:6px">"특별기한연기"는 없는 함정. 연기 1년(주담대·종합통장 등 2년).</p>
+</div>
+
+<div class="dcard">
+<h3>㉜ 신용정보 보존기간</h3>
+<p class="dcap">조회기록·조회내역표·부결서류 3년 / 금융질서문란 5년.</p>
+<svg viewBox="0 0 360 190" class="dsvg" role="img" aria-label="신용정보 보존기간">
+<g class="dbar"><text x="8" y="26" class="dts">금융질서문란</text><rect x="120" y="14" width="180" height="16" rx="4" fill="var(--dwarn2)"/><text x="308" y="27" class="dt b">5년</text></g>
+<g class="dbar"><text x="8" y="52" class="dts">기업신용공여 12월보</text><rect x="120" y="40" width="120" height="16" rx="4" fill="var(--d4)"/><text x="248" y="53" class="dt b">3년</text></g>
+<g class="dbar"><text x="8" y="78" class="dts">조회기록·조회내역표</text><rect x="120" y="66" width="120" height="16" rx="4" fill="var(--accent)"/><text x="248" y="79" class="dt b">3년</text></g>
+<g class="dbar"><text x="8" y="104" class="dts">부결 서류</text><rect x="120" y="92" width="120" height="16" rx="4" fill="var(--d3)"/><text x="248" y="105" class="dt b">3년</text></g>
+<g class="dbar"><text x="8" y="130" class="dts">정정·삭제 증빙</text><rect x="120" y="118" width="80" height="16" rx="4" fill="var(--d3)"/><text x="208" y="131" class="dt b">2년</text></g>
+<g class="dbar"><text x="8" y="156" class="dts">연체정보</text><rect x="120" y="144" width="40" height="16" rx="4" fill="var(--d2)"/><text x="168" y="157" class="dt b">최장 1년</text></g>
+<g class="dbar"><text x="8" y="182" class="dts">회수 후 감사서류·전자문서</text><rect x="120" y="170" width="60" height="16" rx="4" fill="var(--d2)"/><text x="188" y="183" class="dts">5년 / 전자 10년</text></g>
 </svg>
 </div>
 
@@ -9189,361 +9448,513 @@ details.ans summary::-webkit-details-marker{display:none}
 <td data-label="100">3년 / 5년</td>
 </tr>
 </tbody>
-</table></div></section></div></section><section class="panel" id="p4"><blockquote>
-<p>복기 한 줄이 실제로 어떤 규정(교재 9판)을 묻는 것인지, 그리고 어느 예상문제로 연습할 수 있는지 연결한 표입니다.</p>
-</blockquote>
-<h2>A. 동기 복기 (최신 시험)</h2>
+</table></div></section></div></section><section class="panel" id="p4"><div class="subtabs"><button class="subtab active" data-sub="m-s0" data-group="">A. 동기 복기</button><button class="subtab" data-sub="m-s1" data-group="">B. 블라인드 복기</button><button class="subtab" data-sub="m-s2" data-group="">C. 실제 자격시험 문제지</button><button class="subtab" data-sub="m-s3" data-group="">D. 구판 자료 ≠ 현행 교재</button></div><section class="subpanel active" id="m-s0"><h2>A. 동기 복기 (최신 시험)</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
-<th>#</th>
-<th>복기 내용</th>
-<th>정답 · 근거</th>
-<th>예상문제</th>
+<th>논점</th>
+<th>무엇을 물었나</th>
+<th>정답과 이유</th>
+<th>연습</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="#">1</td>
-<td data-label="복기 내용">LTV 계산</td>
-<td data-label="정답 · 근거">LTV = (대출가능금액+선순위+임차보증금)/담보평가액 → 4억·2억 = 50% / 용도혼재 가중평균 47%</td>
-<td data-label="예상문제">1권 Q86 · 2권 Q37·38</td>
+<td data-label="논점"><span class="tier t3">🔴</span> LTV 계산</td>
+<td data-label="무엇을 물었나">감정가·대출액으로 LTV, 또는 여러 용도 건물의 최종 LTV 계산</td>
+<td data-label="정답과 이유">LTV = (대출가능금액+선순위+임차보증금) ÷ 담보평가액 ×100. 4억 담보·2억 대출 = <strong>50%</strong>. 용도 혼재 시 용도별 LTV×면적비율 합산 후 소수점 버림 (50%×0.3+40%×0.3+50%×0.4 = <strong>47%</strong>)</td>
+<td data-label="연습">1권 Q86·2권 Q37·38</td>
 </tr>
 <tr>
-<td data-label="#">2</td>
-<td data-label="복기 내용">신용공여 자기자본 몇 %</td>
-<td data-label="정답 · 근거">동일차주 25 / 동일인 20 / 거액 10%·5배 / 대주주 25 / 자회사 10·20</td>
-<td data-label="예상문제">1권 Q8·43</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 신용공여한도</td>
+<td data-label="무엇을 물었나">동일차주·동일인·거액·대주주 한도(자기자본 대비)</td>
+<td data-label="정답과 이유">동일차주 <strong>25%</strong> / 동일인 <strong>20%</strong> / 자회사 각 10%·전체 20% / 대주주 25% / 거액 합계 자기자본 <strong>5배</strong>. "동일차주 20%" ✗</td>
+<td data-label="연습">1권 Q8·43</td>
 </tr>
 <tr>
-<td data-label="#">3</td>
-<td data-label="복기 내용">농업인 농지 ㎡</td>
-<td data-label="정답 · 근거"><strong>1,000㎡</strong> (90일·330㎡·660㎡)</td>
-<td data-label="예상문제">1권 Q34</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 농업인 농지면적</td>
+<td data-label="무엇을 물었나">농협법 시행령상 농업인 요건</td>
+<td data-label="정답과 이유">농지 <strong>1,000㎡ 이상</strong> 또는 연 <strong>90일 이상</strong> 종사, 시설원예 330㎡, 채소·과수·화훼 660㎡</td>
+<td data-label="연습">1권 Q34</td>
 </tr>
 <tr>
-<td data-label="#">4</td>
-<td data-label="복기 내용">취급 전 단계 = 여신신청접수</td>
-<td data-label="정답 · 근거">영업·상담 → 신청접수</td>
-<td data-label="예상문제">1권 Q6·40</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 취급 전 단계</td>
+<td data-label="무엇을 물었나">여신업무 3단계 중 어디 속하는지</td>
+<td data-label="정답과 이유">여신영업·상담 → <strong>여신신청접수</strong>까지 취급 전. 신용·담보평가·심사·승인·실행=취급, 사후관리·회수=취급 후. "신청접수=취급 단계" ✗</td>
+<td data-label="연습">1권 Q6·40</td>
 </tr>
 <tr>
-<td data-label="#">5</td>
-<td data-label="복기 내용">주담대 등기 몇 개월</td>
-<td data-label="정답 · 근거">이전등기 접수일·보존등기일부터 <strong>3개월</strong></td>
-<td data-label="예상문제">1권 Q39</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 주담대 등기 후 기한</td>
+<td data-label="무엇을 물었나">이전등기 마친 주택 구입자금 신청 기한</td>
+<td data-label="정답과 이유">이전등기 <strong>접수일부터 3개월 이내</strong>(신축은 보존등기일부터 3개월). 원칙은 등기 전 신청</td>
+<td data-label="연습">1권 Q39</td>
 </tr>
 <tr>
-<td data-label="#">6</td>
-<td data-label="복기 내용">타인 토지에 공작물·수목 → 지상권</td>
-<td data-label="정답 · 근거">민법 지상권</td>
-<td data-label="예상문제">1권 Q90</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 지상권 정의</td>
+<td data-label="무엇을 물었나">타인 토지에 공작물·수목 소유 권리</td>
+<td data-label="정답과 이유"><strong>지상권</strong> — 타인의 토지에 건물·공작물·수목을 소유하기 위해 그 토지를 사용하는 권리</td>
+<td data-label="연습">1권 Q90</td>
 </tr>
 <tr>
-<td data-label="#">7</td>
-<td data-label="복기 내용">질권 틀린 것</td>
-<td data-label="정답 · 근거">부동산 사용·수익 목적 권리는 ✗</td>
-<td data-label="예상문제">1권 Q16</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 질권 틀린 것</td>
+<td data-label="무엇을 물었나">질권이 무엇을 목적으로 하는가</td>
+<td data-label="정답과 이유">재산권은 O, 그러나 <strong>부동산의 사용·수익 목적 권리는 질권 목적 ✗</strong>. "부동산 사용·수익도 질권 목적" ✗</td>
+<td data-label="연습">1권 Q16</td>
 </tr>
 <tr>
-<td data-label="#">8</td>
-<td data-label="복기 내용">변제·제3자 변제</td>
-<td data-label="정답 · 근거">이해관계 없는 제3자는 채무자 의사에 반해 ✗</td>
-<td data-label="예상문제">1권 Q18·49</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 제3자 변제</td>
+<td data-label="무엇을 물었나">제3자가 대신 갚는 한계</td>
+<td data-label="정답과 이유">제3자 변제 O, 단 <strong>이해관계 없는 제3자는 채무자 의사에 반해 변제 ✗</strong>. 충당순서 비용→이자→원본</td>
+<td data-label="연습">1권 Q18·49</td>
 </tr>
 <tr>
-<td data-label="#">9</td>
-<td data-label="복기 내용">중소기업 자산총액</td>
-<td data-label="정답 · 근거"><strong>5천억 미만</strong></td>
-<td data-label="예상문제">1권 Q20</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 중소기업 자산</td>
+<td data-label="무엇을 물었나">자산총액 상한</td>
+<td data-label="정답과 이유">자산총액 <strong>5천억원 미만</strong> + 업종별 평균매출액 기준 모두 충족</td>
+<td data-label="연습">1권 Q20</td>
 </tr>
 <tr>
-<td data-label="#">10</td>
-<td data-label="복기 내용">재예치 제외 기준</td>
-<td data-label="정답 · 근거">거→거 해지금액 / 거→적 <strong>월수입금액</strong> / 적→거 해지금액 / 적→적 월적립금</td>
-<td data-label="예상문제">1권 Q23·57</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 재예치 제외기준</td>
+<td data-label="무엇을 물었나">해지 후 재예치가 꺾기에서 빠지는 한도</td>
+<td data-label="정답과 이유">거→거 <strong>해지금액</strong>, 거→적 <strong>월수입금액</strong>, 적→거 해지금액, 적→적 약정 월적립금. "거→적도 해지금액" ✗</td>
+<td data-label="연습">1권 Q23·57</td>
 </tr>
 <tr>
-<td data-label="#">11</td>
-<td data-label="복기 내용">약관 규제 입법·행정·사법</td>
-<td data-label="정답 · 근거">약관규제법 / 공정위·금감원 사전심사 / 법원·분쟁조정</td>
-<td data-label="예상문제">1권 Q29·76</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 약관 규제 3종</td>
+<td data-label="무엇을 물었나">규제수단이 입법/행정/사법 중 무엇</td>
+<td data-label="정답과 이유">입법=약관규제법, <strong>행정=공정위·금감원 사전심사·시정명령</strong>, 사법=법원·분쟁조정. "시정명령=사법적" ✗, 인가 없어도 사법상 유효</td>
+<td data-label="연습">1권 Q29·76</td>
 </tr>
 <tr>
-<td data-label="#">12</td>
-<td data-label="복기 내용">기한전 채무변제의무·기한이익상실</td>
-<td data-label="정답 · 근거">7조 1항(모든·당연) 2항(당해·당연) 3·4항(청구) 5항(부활)</td>
-<td data-label="예상문제">1권 Q30·81·82</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 기한이익상실</td>
+<td data-label="무엇을 물었나">7조에서 모든채무/당해채무/청구 구분</td>
+<td data-label="정답과 이유">1항 모든채무·당연(압류통지 발송·파산신청·거래정지·폐업) / 2항 당해채무·당연(기업 이자14일·2회, 가계 1개월·2회, 주담대 2개월·3회) / 3·4항 청구(도달 10일). "이자14일=모든채무" ✗</td>
+<td data-label="연습">1권 Q30·81·82</td>
 </tr>
 <tr>
-<td data-label="#">13</td>
-<td data-label="복기 내용">근저당권 변경계약서 종류</td>
-<td data-label="정답 · 근거">확정채무 면책적 인수용 / 계약인수용 / 중첩적 계약인수용</td>
-<td data-label="예상문제">1권 Q85 · 2권 Q85</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 근저당변경계약서</td>
+<td data-label="무엇을 물었나">채무인수별 변경계약서 종류</td>
+<td data-label="정답과 이유"><strong>확정채무 면책적 인수용 / 계약인수용 / 중첩적 계약인수용</strong> 3종. 면책적=약정서+면책적 인수용 계약서</td>
+<td data-label="연습">1권 Q85·2권 Q85</td>
 </tr>
 <tr>
-<td data-label="#">14</td>
-<td data-label="복기 내용">근담보 종류</td>
-<td data-label="정답 · 근거">특정근(연기만) / 한정근(연기·갱신·같은 종류 대환) / 포괄근</td>
-<td data-label="예상문제">1권 Q84 · 2권 Q47</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 근담보 종류</td>
+<td data-label="무엇을 물었나">특정근·한정근·포괄근 차이</td>
+<td data-label="정답과 이유">특정근=연기만 / 한정근=연기·갱신·같은 종류 대환 / 포괄근=모두. 본인=특정·한정근, 제3자=특정근</td>
+<td data-label="연습">1권 Q84·2권 Q47</td>
 </tr>
 <tr>
-<td data-label="#">15</td>
-<td data-label="복기 내용">기타부동산 분류기준 틀린 것</td>
-<td data-label="정답 · 근거">중소형 500㎡·대형 1,000㎡(건축면적), 업무시설 5층↑, 오피스텔 주거/상업</td>
-<td data-label="예상문제">2권 Q35</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 기타부동산 분류</td>
+<td data-label="무엇을 물었나">상가·업무시설·오피스텔 분류 숫자</td>
+<td data-label="정답과 이유">중소형상가 건축면적 <strong>500㎡ 이하</strong>, 대형상가 <strong>1,000㎡ 초과</strong>, 업무시설 5층 초과, 오피스텔 실제 현황으로 주거/상업</td>
+<td data-label="연습">2권 Q35</td>
 </tr>
 <tr>
-<td data-label="#">16</td>
-<td data-label="복기 내용">제3자 소득증빙?</td>
-<td data-label="정답 · 근거">제3자 예금담보 가계 1억·기업 5억 초과 시 용도·상환능력+신용등급 금리차등</td>
-<td data-label="예상문제">2권 Q63·78</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 제3자 예금담보</td>
+<td data-label="무엇을 물었나">언제 용도·상환능력 확인</td>
+<td data-label="정답과 이유">제3자 예금담보 <strong>가계 1억·기업 5억 초과</strong> 시 용도·상환능력 확인 + CSS 등급 산출 후 금리 차등</td>
+<td data-label="연습">2권 Q63·78</td>
 </tr>
 <tr>
-<td data-label="#">17</td>
-<td data-label="복기 내용">O/X 스트레스 DTI 뜻</td>
-<td data-label="정답 · 근거">실제금리+스트레스금리로 산출한 DTI</td>
-<td data-label="예상문제">1권 Q26</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 스트레스 DTI</td>
+<td data-label="무엇을 물었나">정의 O/X</td>
+<td data-label="정답과 이유"><strong>실제 금리 + 향후 금리상승 반영 스트레스 금리로 산출한 DTI</strong>. 신규 변동금리 80% 초과 시 고정 전환·80% 이내</td>
+<td data-label="연습">1권 Q26</td>
 </tr>
 <tr>
-<td data-label="#">18</td>
-<td data-label="복기 내용">명목금리 여부</td>
-<td data-label="정답 · 근거">화폐가치 변동 미고려 = 명목 / 고려 = 실질</td>
-<td data-label="예상문제">2권 Q26·87</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 명목금리</td>
+<td data-label="무엇을 물었나">정의 O/X</td>
+<td data-label="정답과 이유"><strong>명목금리 = 화폐가치 변동(물가) 미고려 금리</strong>. 실질금리 = 명목 − 물가상승률</td>
+<td data-label="연습">2권 Q26·87</td>
 </tr>
 </tbody>
 </table></div>
-<h2>B. 블라인드 복기</h2>
+<hr /></section><section class="subpanel" id="m-s1"><h2>B. 블라인드 복기</h2>
 <div class="tscroll"><table>
 <thead>
 <tr>
-<th>#</th>
-<th>복기 내용</th>
-<th>정답 · 근거</th>
-<th>예상문제</th>
+<th>논점</th>
+<th>무엇을 물었나</th>
+<th>정답과 이유</th>
+<th>연습</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="#">1</td>
-<td data-label="복기 내용">합자회사</td>
-<td data-label="정답 · 근거">무한책임사원 1↑+유한책임사원 1↑, 무한책임사원만 대표</td>
-<td data-label="예상문제">1권 Q68</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 합자회사</td>
+<td data-label="무엇을 물었나">구성과 대표</td>
+<td data-label="정답과 이유"><strong>무한책임사원 1인↑ + 유한책임사원 1인↑</strong>, <strong>무한책임사원만</strong> 업무집행·대표. 정관·총사원 결의로 대표사원 지정 가능</td>
+<td data-label="연습">1권 Q68</td>
 </tr>
 <tr>
-<td data-label="#">2</td>
-<td data-label="복기 내용">수수료 반환 며칠</td>
-<td data-label="정답 · 근거">대출계약 철회 효력발생일부터 <strong>3영업일</strong></td>
-<td data-label="예상문제">요약집 UNIT 11</td>
+<td data-label="논점"><span class="tier t2">🟠</span> 철회 수수료 반환</td>
+<td data-label="무엇을 물었나">대출계약 철회 후 수수료 반환 기한</td>
+<td data-label="정답과 이유">철회 효력 발생일부터 <strong>3영업일 이내</strong> 반환. 철회는 서류 수령일(실행일)부터 14일 이내</td>
+<td data-label="연습">요약 UNIT11</td>
 </tr>
 <tr>
-<td data-label="#">3</td>
-<td data-label="복기 내용">근저당설정비용 미포함 = 인지세</td>
-<td data-label="정답 · 근거">등록세+교육세+채권매입+법무사</td>
-<td data-label="예상문제">2권 Q82</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 설정비용 미포함</td>
+<td data-label="무엇을 물었나">근저당 설정비용 구성이 아닌 것</td>
+<td data-label="정답과 이유">설정비용 = 등록세(0.2%)+교육세(등록세×20%)+채권매입(1%)+법무사. <strong>인지세는 미포함</strong></td>
+<td data-label="연습">2권 Q82</td>
 </tr>
 <tr>
-<td data-label="#">4</td>
-<td data-label="복기 내용">중도상환 2년 이내 당연면제 → ✗</td>
-<td data-label="정답 · 근거"><strong>3년 경과</strong> 시 당연면제</td>
-<td data-label="예상문제">2권 Q28·80</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 중도상환 면제</td>
+<td data-label="무엇을 물었나">몇 년 지나야 당연면제 O/X</td>
+<td data-label="정답과 이유"><strong>대출실행일부터 3년 경과</strong> 시 당연면제. "2년 이내 면제" ✗</td>
+<td data-label="연습">2권 Q28·80</td>
 </tr>
 <tr>
-<td data-label="#">5</td>
-<td data-label="복기 내용">서류 보관기간(40번) → 3년</td>
-<td data-label="정답 · 근거">조회기록·조회내역표·부결서류 3년 (5년: 회수 후 감사서류, 10년: 전자문서)</td>
-<td data-label="예상문제">2권 Q100</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 서류 보관기간</td>
+<td data-label="무엇을 물었나">서류 몇 년 보관(40번)</td>
+<td data-label="정답과 이유">조회기록·조회내역표·부결서류 <strong>3년</strong>, 회수 후 감사서류·제증명 5년, 전자문서 10년. "5년" 헷갈림 주의</td>
+<td data-label="연습">2권 Q100</td>
 </tr>
 <tr>
-<td data-label="#">6</td>
-<td data-label="복기 내용">소액임차보증금 최대 50%</td>
-<td data-label="정답 · 근거">합계 최고한도 = 감정가×담보비율×50%(가계 주택 감정가×50%)</td>
-<td data-label="예상문제">2권 Q40</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 소액임차보증금 50%</td>
+<td data-label="무엇을 물었나">합계 최고한도</td>
+<td data-label="정답과 이유">최고한도 = <strong>감정가 × 담보비율 × 50%</strong>(주택 담보 가계자금은 감정가 × 50%)</td>
+<td data-label="연습">2권 Q40</td>
 </tr>
 <tr>
-<td data-label="#">7</td>
-<td data-label="복기 내용">5지선다 종합</td>
-<td data-label="정답 · 근거">이전등기 후 3개월 내 가능 O / 경쟁구도 결정요인 O / 임직원 소액대출 금지 제외 O / 추심전 수출환어음 매입 = 제외여신</td>
-<td data-label="예상문제">1권 Q44·74 · 2권 Q74</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 5지선다 종합</td>
+<td data-label="무엇을 물었나">소유권이전·경쟁구도·수수료·기업규모·임직원·수출환어음 묶음</td>
+<td data-label="정답과 이유">이전등기 후 3개월 내 가능(O) / 경쟁구도=금리 결정요인(O) / 임직원 소액대출=금지 예외(O) / <strong>추심 전 수출환어음 매입=총여신한도 제외여신</strong>. 금전대차 아님을 금전대차라 하면 ✗</td>
+<td data-label="연습">1권 Q44·74·2권 Q74</td>
 </tr>
 <tr>
-<td data-label="#">8</td>
-<td data-label="복기 내용">저당권 분리양도 → 틀린 지문</td>
-<td data-label="정답 · 근거">분리 양도·담보 ✗</td>
-<td data-label="예상문제">1권 Q17·47</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 저당권 틀린 지문</td>
+<td data-label="무엇을 물었나">저당권 양도 가능 여부</td>
+<td data-label="정답과 이유">저당권은 <strong>담보한 채권과 분리해 양도·다른 채권 담보 ✗</strong>. "분리 양도 가능" ✗. 지연배상 이행기 경과 후 1년분</td>
+<td data-label="연습">1권 Q17·47</td>
 </tr>
 <tr>
-<td data-label="#">9</td>
-<td data-label="복기 내용">유용 불가 사유 아닌 것</td>
-<td data-label="정답 · 근거">유용 불가 6(임의경매·경락완납·면책적 인수·파산회생·사망·피합병) — 계약서 반환·1년 경과는 습용 불가에만</td>
-<td data-label="예상문제">2권 Q52</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 유용 불가 아닌 것</td>
+<td data-label="무엇을 물었나">무효 근저당 유용 불가 사유가 아닌 것</td>
+<td data-label="정답과 이유">유용 불가 6=임의경매·경락완납·면책적 인수·파산회생·사망·피합병 미동의. <strong>"계약서 내어줌"·"1년 경과"는 습용 불가일 뿐 유용 불가 아님</strong> → 정답</td>
+<td data-label="연습">2권 Q52</td>
 </tr>
 <tr>
-<td data-label="#">10</td>
-<td data-label="복기 내용">해외소득 인정</td>
-<td data-label="정답 · 근거">영사확인·아포스티유 / 소득금액증명원은 경상소득</td>
-<td data-label="예상문제">요약집 UNIT 20</td>
+<td data-label="논점"><span class="tier t2">🟠</span> 해외소득 인정</td>
+<td data-label="무엇을 물었나">해외소득 인정 요건</td>
+<td data-label="정답과 이유">해외 공관 <strong>영사확인</strong> 또는 <strong>아포스티유 인증</strong> 후 제출 시 인정. "해외소득 불인정" ✗</td>
+<td data-label="연습">요약 UNIT20</td>
 </tr>
 <tr>
-<td data-label="#">11</td>
-<td data-label="복기 내용">무보증 탑클래스 6천</td>
-<td data-label="정답 · 근거">탑클래스 6천 / 골드 3천 / 로얄 2천</td>
-<td data-label="예상문제">2권 Q96</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 무보증 탑클래스</td>
+<td data-label="무엇을 물었나">하나로가족 등급별 한도</td>
+<td data-label="정답과 이유"><strong>탑클래스 6천 / 골드 3천 / 로얄 2천만원</strong>. 영업점장 특인 10백만</td>
+<td data-label="연습">2권 Q96</td>
 </tr>
 <tr>
-<td data-label="#">12</td>
-<td data-label="복기 내용">작성자 불리</td>
-<td data-label="정답 · 근거">불명확 시 작성자 책임</td>
-<td data-label="예상문제">1권 Q99</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 작성자 불리</td>
+<td data-label="무엇을 물었나">약관 불명확 시 해석원칙</td>
+<td data-label="정답과 이유"><strong>작성자 불리의 원칙</strong>(불명확 책임=작성자 은행). "작성자 이득" ✗</td>
+<td data-label="연습">1권 Q99</td>
 </tr>
 <tr>
-<td data-label="#">13</td>
-<td data-label="복기 내용">영업점장 특인대출</td>
-<td data-label="정답 · 근거">10백만 / AS9·NICE603·KCB547↓ ✗ / 동일인 1건 / 임직원 ✗</td>
-<td data-label="예상문제">요약집 UNIT 20</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 영업점장 특인</td>
+<td data-label="무엇을 물었나">특인대출 한도·제한</td>
+<td data-label="정답과 이유">한도 <strong>10백만</strong>, AS9·NICE603·KCB547 이하 ✗, 동일인 1건, 일부담보 금지, 임직원 ✗</td>
+<td data-label="연습">요약 UNIT20</td>
 </tr>
 <tr>
-<td data-label="#">14</td>
-<td data-label="복기 내용">한정승인·상속포기</td>
-<td data-label="정답 · 근거">한정승인 → 상실 후 채권신고 / 상속포기 → 상실 후 재산관리인 선임</td>
-<td data-label="예상문제">요약집 UNIT 20</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 한정승인·상속포기</td>
+<td data-label="무엇을 물었나">사망 시 처리</td>
+<td data-label="정답과 이유">단순승인=상속인 승계 / <strong>한정승인=기한이익상실 후 채권신고</strong> / <strong>상속포기=상실 후 재산관리인 선임</strong></td>
+<td data-label="연습">요약 UNIT20</td>
 </tr>
 <tr>
-<td data-label="#">15</td>
-<td data-label="복기 내용">피보증채무 확정 시 대환 불가</td>
-<td data-label="정답 · 근거">면책적 채무인수 → 보통저당권化, 기한연기만</td>
-<td data-label="예상문제">1권 Q5 · 2권 Q85</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 확정 후 대환</td>
+<td data-label="무엇을 물었나">피담보채무 확정 뒤 대환 가능 여부</td>
+<td data-label="정답과 이유"><strong>불가.</strong> 면책적 채무인수 → 보통저당권化 → 습용·유용 ✗, 기한연기·면책적 인수만 가능</td>
+<td data-label="연습">1권 Q5·2권 Q85</td>
 </tr>
 <tr>
-<td data-label="#">16</td>
-<td data-label="복기 내용">임금·조세채권 → 부동산</td>
-<td data-label="정답 · 근거">부동산 = 임차보증금·임금·조세 모두</td>
-<td data-label="예상문제">2권 Q39·90</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 임금·조세 채권</td>
+<td data-label="무엇을 물었나">담보종류별 차감 우선채권 매칭</td>
+<td data-label="정답과 이유"><strong>부동산 = 임차보증금·임금·조세 모두</strong>. 부동산담보신탁수익권=임차보증금만, 동산·유가증권·타행예금=임금·조세만</td>
+<td data-label="연습">2권 Q39·90</td>
 </tr>
 <tr>
-<td data-label="#">17</td>
-<td data-label="복기 내용">임직원 한도 → 사고정리자금</td>
-<td data-label="정답 · 근거">60백만(생활안정·주택 포함)</td>
-<td data-label="예상문제">1권 Q11·94</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 사고정리자금</td>
+<td data-label="무엇을 물었나">임직원 대출한도 종류별 금액</td>
+<td data-label="정답과 이유">생활안정 20 / 주택 50(생활안정 포함) / <strong>사고정리 60백만</strong>(생활안정·주택 포함)</td>
+<td data-label="연습">1권 Q11·94</td>
 </tr>
 <tr>
-<td data-label="#">18</td>
-<td data-label="복기 내용">임대차보호법 "외국인 제외" 선지가 틀림</td>
-<td data-label="정답 · 근거">자연인(외국인 포함) 보호, 법인 ✗</td>
-<td data-label="예상문제">2권 Q11</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 임대차보호 외국인</td>
+<td data-label="무엇을 물었나">주택임대차보호법 보호대상</td>
+<td data-label="정답과 이유"><strong>자연인(외국인 포함) 보호, 법인 ✗</strong>(중소기업 직원 주거용 예외). "외국인 제외" ✗. 미등기·무허가도 대상</td>
+<td data-label="연습">2권 Q11</td>
 </tr>
 <tr>
-<td data-label="#">19</td>
-<td data-label="복기 내용">예금 90% / 평형변경 → 90% 틀림</td>
-<td data-label="정답 · 근거">2영업일 예외: 5천만↓·<strong>80%</strong>·평형변경·재예치·지급보증</td>
-<td data-label="예상문제">2권 Q62</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 예금 90%</td>
+<td data-label="무엇을 물었나">2영업일 이내 예금담보 예외</td>
+<td data-label="정답과 이유">예외=합계 5천만 이하 / <strong>80% 이내</strong> / 청약 평형변경 / 만기 재예치 / 지급보증. "90% 이내" ✗</td>
+<td data-label="연습">2권 Q62</td>
 </tr>
 <tr>
-<td data-label="#">20</td>
-<td data-label="복기 내용">법적비용 아닌 것 → 법인세</td>
-<td data-label="정답 · 근거">출연료(신보·기보·농신보·지역신보·주택신보·서민금융진흥원)·교육세</td>
-<td data-label="예상문제">2권 Q76</td>
+<td data-label="논점"><span class="tier t3">🔴</span> 법적비용 아닌 것</td>
+<td data-label="무엇을 물었나">표준형식 금리 법적비용이 아닌 것</td>
+<td data-label="정답과 이유">법적비용=신보·기보·농신보·지역신보·주택신보·서민금융진흥원 출연료+교육세. <strong>법인세 ✗</strong>(조달비용=기준금리, 인건비=업무원가)</td>
+<td data-label="연습">2권 Q76</td>
 </tr>
 </tbody>
 </table></div>
-<h2>C. 실제 자격시험 문제지 (pptx, 40문항) 논점</h2>
+<hr /></section><section class="subpanel" id="m-s2"><h2>C. 실제 자격시험 문제지 (pptx, 40문항)</h2>
 <p><strong>진위형 (1~10번)</strong></p>
-<ul>
-<li>개인사업자 주택자금 → O</li>
-<li>부결 시에도 통지 필요 → O</li>
-<li>동일차주 20% 초과 불가 → ✗ (25%)</li>
-<li>고용임원 연대입보 요구 = 불공정 → O</li>
-<li>공정위 시정명령 = 사법적 규제 → ✗ (행정적)</li>
-<li>고정금리 불이익 3개월 내 해지 → ✗ (1개월)</li>
-<li>건폐율 여유토지에 건축물 없는 부분 지상권 → O</li>
-<li>입목은 부동산으로 본다 → O</li>
-<li>영업점 기타요인 보정한도 120% → O</li>
-<li>근저당 설정비용 차주 부담 → ✗ (당행)</li>
-</ul>
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>지문</th>
+<th>정답</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="지문">개인사업자 주택자금 대출 가능</td>
+<td data-label="정답">O</td>
+</tr>
+<tr>
+<td data-label="지문">여신 부결 시에도 통지 필요</td>
+<td data-label="정답">O</td>
+</tr>
+<tr>
+<td data-label="지문">동일차주 20% 초과 불가</td>
+<td data-label="정답">✗ (25%)</td>
+</tr>
+<tr>
+<td data-label="지문">고용임원에 연대입보 요구 = 불공정영업행위</td>
+<td data-label="정답">O</td>
+</tr>
+<tr>
+<td data-label="지문">공정위 시정명령 = 사법적 규제</td>
+<td data-label="정답">✗ (행정적)</td>
+</tr>
+<tr>
+<td data-label="지문">고정금리 불이익 시 3개월 내 해지</td>
+<td data-label="정답">✗ (1개월)</td>
+</tr>
+<tr>
+<td data-label="지문">건폐율 여유토지의 건축물 없는 부분에 지상권</td>
+<td data-label="정답">O</td>
+</tr>
+<tr>
+<td data-label="지문">입목은 부동산으로 본다</td>
+<td data-label="정답">O</td>
+</tr>
+<tr>
+<td data-label="지문">영업점 감정 기타요인 보정한도 120%</td>
+<td data-label="정답">O</td>
+</tr>
+<tr>
+<td data-label="지문">근저당 설정비용 차주 부담</td>
+<td data-label="정답">✗ (당행)</td>
+</tr>
+</tbody>
+</table></div>
 <p><strong>선다형 (11~22번)</strong></p>
-<ul>
-<li>여신담당자 자세 — 긍정적 측면에 유의 → ✗ (부정적)</li>
-<li>미성년자 — 친족회 동의 → ✗ (후견감독인)</li>
-<li>의사표시 — 발송 후 사망해도 효력 유지</li>
-<li>소멸시효 — 채권 외 재산권 20년</li>
-<li>저당권 — 지연배상 3년분 → ✗ (1년분)</li>
-<li>간주규제의 정의</li>
-<li><strong>구속행위 제외 여신거래가 아닌 것 = 원화지급보증 중 대출보증</strong> (정답)</li>
-<li>사단 ≠ 재단</li>
-<li>의료법인 대표 = 병원장 → ✗ (이사장)</li>
-<li>포괄약정 우선의 원칙 → ✗ (개별약정 우선)</li>
-<li>가계 당연상실 — 주담대 외 이자 14일 → ✗ (1개월)</li>
-<li>근저당 결산기 — 자동확정형이 편리 → ✗ (장래지정형)</li>
-</ul>
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>논점</th>
+<th>정답 요지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="논점">여신담당자 자세</td>
+<td data-label="정답 요지">긍정적 측면에 유의 ✗ → 부정적 측면에 더 유의</td>
+</tr>
+<tr>
+<td data-label="논점">미성년자</td>
+<td data-label="정답 요지">친족회 동의 ✗ → 후견감독인 동의</td>
+</tr>
+<tr>
+<td data-label="논점">의사표시</td>
+<td data-label="정답 요지">발송 후 사망해도 효력 유지</td>
+</tr>
+<tr>
+<td data-label="논점">소멸시효</td>
+<td data-label="정답 요지">채권 외 재산권 20년</td>
+</tr>
+<tr>
+<td data-label="논점">저당권</td>
+<td data-label="정답 요지">지연배상 3년분 ✗ → 1년분</td>
+</tr>
+<tr>
+<td data-label="논점">구속행위</td>
+<td data-label="정답 요지">간주규제의 정의</td>
+</tr>
+<tr>
+<td data-label="논점">구속행위 제외 여신거래 아닌 것</td>
+<td data-label="정답 요지"><strong>원화지급보증 중 대출보증</strong> (정답)</td>
+</tr>
+<tr>
+<td data-label="논점">채무관계자</td>
+<td data-label="정답 요지">사단 ≠ 재단 (사단=사람, 재단=목적재산)</td>
+</tr>
+<tr>
+<td data-label="논점">의료법인</td>
+<td data-label="정답 요지">대표 = 병원장 ✗ → 이사장</td>
+</tr>
+<tr>
+<td data-label="논점">약관 해석</td>
+<td data-label="정답 요지">포괄약정 우선 ✗ → 개별약정 우선</td>
+</tr>
+<tr>
+<td data-label="논점">가계 당연상실</td>
+<td data-label="정답 요지">주담대 외 이자 14일 ✗ → 1개월</td>
+</tr>
+<tr>
+<td data-label="논점">근저당 결산기</td>
+<td data-label="정답 요지">자동확정형이 편리 ✗ → 장래지정형</td>
+</tr>
+</tbody>
+</table></div>
 <p><strong>선다형 (23~30번)</strong></p>
-<ul>
-<li>LTV 가중평균 = 47%</li>
-<li>부동산담보신탁수익권 우선채권 = 임차보증금만</li>
-<li>조세 취급시점만 적용 = 채무자 달리하는 대환</li>
-<li>화재보험 생략 가능한 경우가 아닌 것 = 동산</li>
-<li>담보취득 금지부동산 = 종중재산·공부상 공유지분 건물</li>
-<li>집합상가 경계표지·건물번호표지</li>
-<li>신용보증서 실행기한 60일</li>
-<li>특수물건이 아닌 것 = 1억원 이하 임야</li>
-</ul>
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>논점</th>
+<th>정답 요지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="논점">LTV 가중평균</td>
+<td data-label="정답 요지">47%</td>
+</tr>
+<tr>
+<td data-label="논점">부동산담보신탁수익권 우선채권</td>
+<td data-label="정답 요지">임차보증금만</td>
+</tr>
+<tr>
+<td data-label="논점">조세채권 취급시점만 적용</td>
+<td data-label="정답 요지">채무자 달리하는 대환</td>
+</tr>
+<tr>
+<td data-label="논점">화재보험 생략 가능이 아닌 것</td>
+<td data-label="정답 요지">동산</td>
+</tr>
+<tr>
+<td data-label="논점">담보취득 금지부동산</td>
+<td data-label="정답 요지">종중재산·공부상 공유지분 건물</td>
+</tr>
+<tr>
+<td data-label="논점">집합상가</td>
+<td data-label="정답 요지">경계표지·건물번호표지</td>
+</tr>
+<tr>
+<td data-label="논점">신용보증서 실행기한</td>
+<td data-label="정답 요지">60일</td>
+</tr>
+<tr>
+<td data-label="논점">특수물건이 아닌 것</td>
+<td data-label="정답 요지">1억원 이하 임야</td>
+</tr>
+</tbody>
+</table></div>
 <p><strong>선다형 (31~40번)</strong></p>
-<ul>
-<li>자체감정 불가 = 시세 없는 아파트</li>
-<li>명목금리의 정의</li>
-<li>기준금리가 아닌 것 = 기업어음금리</li>
-<li>연체대출 최고금리 15%</li>
-<li>중도상환해약금 당연면제가 아닌 것 = 만료일 전 3개월 이내</li>
-<li>인지세 부담 = 당행·차주 각 50%</li>
-<li>무보증 신용여신 가능금액 산출식</li>
-<li>집단대출 대출금 지급 = 시행사 명의 계좌</li>
-<li>상계금지 대상이 아닌 것 = 주택청약예금</li>
-<li>신용능력정보가 아닌 것 = 개인의 대출현황</li>
-</ul>
+<div class="tscroll"><table>
+<thead>
+<tr>
+<th>논점</th>
+<th>정답 요지</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="논점">자체감정 불가</td>
+<td data-label="정답 요지">시세 없는 아파트</td>
+</tr>
+<tr>
+<td data-label="논점">명목금리</td>
+<td data-label="정답 요지">정의</td>
+</tr>
+<tr>
+<td data-label="논점">기준금리가 아닌 것</td>
+<td data-label="정답 요지">기업어음금리</td>
+</tr>
+<tr>
+<td data-label="논점">연체대출 최고금리</td>
+<td data-label="정답 요지">15%</td>
+</tr>
+<tr>
+<td data-label="논점">중도상환해약금 당연면제 아닌 것</td>
+<td data-label="정답 요지">만료일 전 3개월 이내</td>
+</tr>
+<tr>
+<td data-label="논점">인지세 부담</td>
+<td data-label="정답 요지">당행·차주 각 50%</td>
+</tr>
+<tr>
+<td data-label="논점">무보증 신용여신 가능금액</td>
+<td data-label="정답 요지">산출식</td>
+</tr>
+<tr>
+<td data-label="논점">집단대출 대출금 지급</td>
+<td data-label="정답 요지">시행사 명의 계좌</td>
+</tr>
+<tr>
+<td data-label="논점">상계금지 대상이 아닌 것</td>
+<td data-label="정답 요지">주택청약예금</td>
+</tr>
+<tr>
+<td data-label="논점">신용능력정보가 아닌 것</td>
+<td data-label="정답 요지">개인의 대출현황</td>
+</tr>
+</tbody>
+</table></div>
 <blockquote>
 <p>⚠ <strong>17번 주의</strong> — 교재 본문(p.89)은 "지급보증(원화·외화) 제외"로 단순 기재되어 있으나, 요약정리(p.160)·기출은 <strong>대출보증·사채보증을 규제대상 여신</strong>으로 봅니다. 제외 4가지(외화지급보증·이행보증·매입외환·구매카드대금)로 기억하세요.</p>
 </blockquote>
-<h2>D. 구판 정답 ≠ 현행 교재 (현행 기준으로 답할 것)</h2>
+<hr /></section><section class="subpanel" id="m-s3"><h2>D. 구판 자료 ≠ 현행 교재 (현행 기준으로 답할 것)</h2>
+<blockquote>
+<p>오래된 기출·hwp의 정답이 현행 9판과 다른 항목입니다. 시험은 <strong>현행 교재 기준</strong>으로 나옵니다.</p>
+</blockquote>
 <div class="tscroll"><table>
 <thead>
 <tr>
 <th>항목</th>
-<th>구판</th>
-<th>현행</th>
+<th>구판 정답</th>
+<th>현행 교재(9판)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td data-label="항목">연체금리</td>
-<td data-label="구판">30일↓ +6%</td>
-<td data-label="현행"><strong>정상약정금리+3%</strong>, 최고 15%</td>
+<td data-label="항목">연체대출금리</td>
+<td data-label="구판 정답">30일 이하 +6%</td>
+<td data-label="현행 교재(9판)"><strong>정상약정금리 + 3%, 최고 15%</strong></td>
 </tr>
 <tr>
 <td data-label="항목">공유지분 LTV</td>
-<td data-label="구판">20% 하향</td>
-<td data-label="현행"><strong>10% 하향</strong></td>
+<td data-label="구판 정답">20% 하향</td>
+<td data-label="현행 교재(9판)"><strong>10% 하향</strong></td>
 </tr>
 <tr>
 <td data-label="항목">주택담보 설정금액</td>
-<td data-label="구판">120%</td>
-<td data-label="현행">가계 주택 <strong>110%</strong> (가계 외 120%)</td>
+<td data-label="구판 정답">120%</td>
+<td data-label="현행 교재(9판)"><strong>가계 주택 110%</strong> (가계 외 120%)</td>
 </tr>
 <tr>
 <td data-label="항목">부도정보 집중</td>
-<td data-label="구판">10일</td>
-<td data-label="현행"><strong>7영업일</strong> 이내(매주 1회)</td>
+<td data-label="구판 정답">10일 이내</td>
+<td data-label="현행 교재(9판)"><strong>매주 1회, 7영업일 이내</strong></td>
 </tr>
 <tr>
 <td data-label="항목">외부감정 심사</td>
-<td data-label="구판">5억 기준, 서류 3·현장 5영업일</td>
-<td data-label="현행">등급별 20/10/3억, 3영업일</td>
+<td data-label="구판 정답">5억 기준·서류 3/현장 5영업일</td>
+<td data-label="현행 교재(9판)"><strong>등급별 20/10/3억, 여신기획부 3영업일</strong></td>
 </tr>
 <tr>
-<td data-label="항목">6억↑ 아파트 DTI</td>
-<td data-label="구판">서울·경기 60%</td>
-<td data-label="현행">규제지역 40% / 자율 50% / 전국 100%</td>
+<td data-label="항목">6억 초과 아파트 DTI</td>
+<td data-label="구판 정답">서울·경기 60%</td>
+<td data-label="현행 교재(9판)"><strong>규제지역 40% / 자율 50% / 전국 100%</strong></td>
 </tr>
 </tbody>
-</table></div></section></main><a id="top" href="#" title="맨 위로">▲</a>
+</table></div></section></section></main><a id="top" href="#" title="맨 위로">▲</a>
 <script>
 (function(){
   function qsa(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
