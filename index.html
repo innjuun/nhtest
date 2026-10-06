@@ -148,6 +148,14 @@ article.q.bm-on{box-shadow:inset 3px 0 0 var(--star)}
 #p5 .bmio{display:none;margin:0 0 14px}
 #p5 .bmio.show{display:block}
 #p5 .bmstatus{font-size:.86em;color:var(--muted);margin:8px 0 0}#p5 .bmstatus.on{color:var(--accent)}
+
+/* auto-hide header */
+:root{--hdr-h:96px}
+header{transition:transform .25s ease;will-change:transform}
+html.hdr-hide header{transform:translateY(calc(-100% - env(safe-area-inset-top,0px)))}
+.subtabs{top:calc(var(--hdr-h) + env(safe-area-inset-top,0px));transition:top .25s ease}
+html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
+@media (prefers-reduced-motion:reduce){header,.subtabs{transition:none}}
 </style></head><body><header><div class="hrow"><h1>개인여신전문역 · NH 여신 I·II 합격노트 <span class="upd">13판</span></h1><button id="themebtn" class="tbtn" title="라이트/다크">◐</button></div><div class="tabs"><button class="tab active" data-p="p0">① 핵심정리</button><button class="tab" data-p="p1">② 요약카드</button><button class="tab" data-p="p2">③ 1권 문제</button><button class="tab" data-p="p3">④ 2권 문제</button><button class="tab" data-p="p4">⑤ 복기·기출</button><button class="tab" data-p="p5">⑥ 다시 보기 <span id="bmcount" class="bmcount"></span></button></div></header><main><section class="panel active" id="p0"><blockquote>
 <p><strong>이 문서의 원칙</strong>
 - 교재(<strong>13판, 2026.3.19 발행</strong>) 기준으로 갱신했으며 <strong>목차 순서</strong> 그대로 정리했고, 용어와 문장은 교재 표현을 그대로 살렸습니다. (실제 기출은 교재 문장에서 숫자·주체·한 단어만 바꿔 출제하므로, 축약된 표현보다 원문 표현에 익숙해지는 것이 유리합니다.)
@@ -11773,7 +11781,7 @@ article.q.bm-on{box-shadow:inset 3px 0 0 var(--star)}
   try{var raw=localStorage.getItem(VKEY);if(raw){var o=JSON.parse(raw);if(o&&typeof o==='object'){st.tab=o.tab||null;st.subs=o.subs||{};st.chips=o.chips||{};st.pos=o.pos||{};}}}catch(e){}
   try{if(!st.tab){var t0=localStorage.getItem('tab');if(t0)st.tab=t0;}}catch(e){}
   function persist(){try{localStorage.setItem(VKEY,JSON.stringify(st));localStorage.setItem('tab',st.tab||'');}catch(e){}}
-  function hdr(){var h=document.querySelector('header');return h?Math.max(0,h.getBoundingClientRect().bottom):0;}
+  function hdr(){var h=document.querySelector('header');if(!h)return 0;var t=parseFloat(getComputedStyle(h).top)||0;return h.offsetHeight+t;}
   function activePanel(){return document.querySelector('.panel.active');}
   function viewKey(panel){panel=panel||activePanel();if(!panel)return '';var sp=panel.querySelector('.subpanel.active');return panel.id+'|'+(sp?sp.id:'');}
   function scope(panel){panel=panel||activePanel();if(!panel)return null;return panel.querySelector('.subpanel.active')||panel;}
@@ -11864,6 +11872,19 @@ article.q.bm-on{box-shadow:inset 3px 0 0 var(--star)}
   function flush(){try{capture();persist();}catch(e){}}
   window.addEventListener('pagehide',flush);
   document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')flush();});
+  /* auto-hide header on scroll down, show on scroll up */
+  var HD=document.querySelector('header'), hidden=false, lastY=window.scrollY;
+  function measure(){if(!HD)return;document.documentElement.style.setProperty('--hdr-h',HD.offsetHeight+'px');}
+  measure(); window.addEventListener('resize',measure);
+  try{if(window.ResizeObserver)new ResizeObserver(measure).observe(HD);}catch(e){}
+  function setHide(h){if(h===hidden)return;hidden=h;document.documentElement.classList.toggle('hdr-hide',h);}
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY, d=y-lastY; lastY=y;
+    if(y<(HD?HD.offsetHeight:90)+20){setHide(false);return;}
+    if(Math.abs(d)>300)return; /* programmatic jump (tab restore) */
+    if(d>6)setHide(true); else if(d<-6)setHide(false);
+  },{passive:true});
+  qsa('.tab,.subtab,.chip').forEach(function(b){b.addEventListener('click',function(){setHide(false);lastY=window.scrollY;});});
   var top=document.getElementById('top');
   function topBtn(){var on=window.scrollY>400;top.style.opacity=on?'1':'0';top.style.pointerEvents=on?'auto':'none';}
   window.addEventListener('scroll',topBtn,{passive:true}); topBtn();
