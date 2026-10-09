@@ -156,6 +156,20 @@ html.hdr-hide header{transform:translateY(calc(-100% - env(safe-area-inset-top,0
 .subtabs{top:calc(var(--hdr-h) + env(safe-area-inset-top,0px));transition:top .25s ease}
 html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
 @media (prefers-reduced-motion:reduce){header,.subtabs{transition:none}}
+
+.bm.again{color:var(--star)}
+#p5 .bmsep{flex:0 0 1px;align-self:stretch;background:var(--line);margin:0 4px}
+#p5 .bmcard.again{border-color:var(--star);box-shadow:inset 3px 0 0 var(--star)}
+#p5 .bmbadge{display:inline-flex;gap:6px;align-items:center;font-size:.95em}
+#p5 .bmbadge b{font-weight:700;border-radius:6px;padding:1px 6px}
+#p5 .bmbadge b.again{background:var(--starbg);color:var(--ink)}
+#p5 .bmbadge b.ok{background:rgba(16,185,129,.15);color:var(--ink)}
+#p5 .bmbadge i{font-style:normal;color:var(--muted)}
+#p5 .bmcard>.bmact{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+#p5 .bmcard>.bmact button.ok{border-color:rgba(16,185,129,.6)}
+#p5 .bmcard>.bmact button.again{border-color:var(--star)}
+#p5 .bmhint{margin:8px 0 0;font-size:.86em;color:var(--accent)}
+#p5 .bmbar button[data-bmm].active,#p5 .bmbar button[data-bmo].active{background:var(--accent);border-color:var(--accent);color:#fff}
 </style></head><body><header><div class="hrow"><h1>개인여신전문역 · NH 여신 I·II 합격노트 <span class="upd">13판</span></h1><button id="themebtn" class="tbtn" title="라이트/다크">◐</button></div><div class="tabs"><button class="tab active" data-p="p0">① 핵심정리</button><button class="tab" data-p="p1">② 요약카드</button><button class="tab" data-p="p2">③ 1권 문제</button><button class="tab" data-p="p3">④ 2권 문제</button><button class="tab" data-p="p4">⑤ 복기·기출</button><button class="tab" data-p="p5">⑥ 다시 보기 <span id="bmcount" class="bmcount"></span></button></div></header><main><section class="panel active" id="p0"><blockquote>
 <p><strong>이 문서의 원칙</strong>
 - 교재(<strong>13판, 2026.3.19 발행</strong>) 기준으로 갱신했으며 <strong>목차 순서</strong> 그대로 정리했고, 용어와 문장은 교재 표현을 그대로 살렸습니다. (실제 기출은 교재 문장에서 숫자·주체·한 단어만 바꿔 출제하므로, 축약된 표현보다 원문 표현에 익숙해지는 것이 유리합니다.)
@@ -11765,9 +11779,10 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
 </tr>
 </tbody>
 </table></div>
-</section></section><section class="panel" id="p5"><h2>⑥ 다시 보기</h2>
-<blockquote><p>문제·표 줄 옆의 <strong>☆</strong>를 누르면 <strong>★</strong>로 바뀌고 여기에 모입니다. claude.ai 링크로 열면 체크가 <strong>내 계정에 저장</strong>되어 PC·휴대폰 어디서든 이어집니다(체크는 나만 보임). 파일로 직접 열면 그 브라우저에만 저장되며, 이때는 <strong>백업 내보내기</strong>/<strong>가져오기</strong>로 옮길 수 있습니다.</p></blockquote>
+</section></section><section class="panel" id="p5"><h2>⑥ 다시 보기 · 오답노트</h2>
+<blockquote><p>문제·표 줄 옆의 <strong>☆</strong>를 누르면 <strong>★</strong>로 바뀌고 여기에 모입니다. 카드를 풀어 보고 <strong>⭕ 맞았어요</strong> 또는 <strong>🔁 한 번 더</strong>를 누르세요. 다시 틀린 것은 🔁 표시와 횟수가 쌓이고(원래 위치의 ★도 🔁로 바뀜), 두 번 연속 맞히면 <strong>🎓 졸업</strong>을 권해 드립니다. 체크와 기록은 이 브라우저에 저장되며, <strong>백업 내보내기</strong>/<strong>가져오기</strong>로 옮길 수 있습니다.</p></blockquote>
 <p id="bmstatus" class="bmstatus">💾 이 브라우저에만 저장 중</p>
+<div class="bmbar" id="bmmode"></div>
 <div class="bmbar" id="bmfilter"></div>
 <div class="bmbar"><button type="button" data-bmx="open">정답·해설 모두 펼치기</button><button type="button" data-bmx="close">모두 접기</button><button type="button" data-bmx="export">백업 내보내기</button><button type="button" data-bmx="import">가져오기</button><button type="button" data-bmx="clear">전체 해제</button></div>
 <div class="bmio" id="bmio"><textarea id="bmtext" spellcheck="false"></textarea><div class="bmbar"><button type="button" data-bmx="copy">복사</button><button type="button" data-bmx="apply">가져오기 적용</button><button type="button" data-bmx="hideio">닫기</button></div></div>
@@ -11898,7 +11913,9 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
   var KEY='yeosin-bookmarks-v1', mem={};
   function loadLocal(){try{var v=localStorage.getItem(KEY);return v?JSON.parse(v):{};}catch(e){return mem;}}
   function saveLocal(o){mem=o;try{localStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
-  var bm=loadLocal();
+  function N(v){if(typeof v==='number')return {t:v,n:1,ok:0};if(v&&typeof v==='object')return {t:v.t||Date.now(),n:v.n||1,ok:v.ok||0,last:v.last||0};return null;}
+  function normAll(o){var r={};Object.keys(o||{}).forEach(function(k){var x=N(o[k]);if(x)r[k]=x;});return r;}
+  var bm=normAll(loadLocal());
   /* --- server sync (claude.ai artifact db) --- */
   var ref=null, pending=0, timer=null, mode='local';
   function setStatus(m,msg){mode=m;var e=document.getElementById('bmstatus');if(!e)return;
@@ -11923,13 +11940,13 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
         ref=db.doc('data/users/'+uid+'/bookmarks');
         return ref.get().then(function(snap){
           var d=snap.exists?snap.data():null;
-          if(d&&d.items&&typeof d.items==='object'){bm=Object.assign({},d.items);saveLocal(bm);setStatus('server');}
+          if(d&&d.items&&typeof d.items==='object'){bm=normAll(d.items);saveLocal(bm);setStatus('server');}
           else{setStatus('server'); if(Object.keys(bm).length)pushServer();}
           paint(); if(document.getElementById('p5').classList.contains('active'))render();
           ref.onSnapshot(function(sn){
             if(pending||!sn.exists)return; var x=sn.data(); if(!x||!x.items)return;
             if(JSON.stringify(x.items)===JSON.stringify(bm))return;
-            bm=Object.assign({},x.items);saveLocal(bm);paint();if(document.getElementById('p5').classList.contains('active'))render();
+            bm=normAll(x.items);saveLocal(bm);paint();if(document.getElementById('p5').classList.contains('active'))render();
           },function(){});
         });
       });
@@ -11963,29 +11980,41 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
     });
   });
   function paint(){
-    qsa('.bm[data-bm]').forEach(function(b){var on=!!bm[b.getAttribute('data-bm')];b.classList.toggle('on',on);b.textContent=on?'★':'☆';var it=byId[b.getAttribute('data-bm')];if(it)it.el.classList.toggle('bm-on',on);});
-    var c=Object.keys(bm).filter(function(k){return byId[k];}).length;
-    var e=document.getElementById('bmcount'); if(e)e.textContent=c?'('+c+')':'';
+    qsa('.bm[data-bm]').forEach(function(b){var v=bm[b.getAttribute('data-bm')],on=!!v;b.classList.toggle('on',on);b.classList.toggle('again',on&&v.n>=2);b.textContent=on?(v.n>=2?'🔁':'★'):'☆';b.title=on?(v.n>=2?'한 번 더 보기 '+v.n+'회 — 누르면 해제':'다시 보기 — 누르면 해제'):'다시 보기에 추가';var it=byId[b.getAttribute('data-bm')];if(it)it.el.classList.toggle('bm-on',on);});
+    var ks=Object.keys(bm).filter(function(k){return byId[k];}), c=ks.length, a=ks.filter(function(k){return bm[k].n>=2;}).length;
+    var e=document.getElementById('bmcount'); if(e)e.textContent=c?'('+c+(a?' · 🔁'+a:'')+')':'';
   }
-  var filt='__all';
+  var filt='__all', mode='all', order='note', shuf={};
   function render(){
     var list=document.getElementById('bmlist'); if(!list)return;
     var fb=document.getElementById('bmfilter'); fb.innerHTML='';
     var sel=items.filter(function(it){return bm[it.id];});
+    if(mode==='again')sel=sel.filter(function(it){return bm[it.id].n>=2;});
+    else if(mode==='new')sel=sel.filter(function(it){return !bm[it.id].last;});
     var groups=[['__all','전체 '+sel.length]];
     ['p0','p1','p2','p3','p4'].forEach(function(p){var k=sel.filter(function(x){return x.panel===p;}).length;if(k)groups.push([p,TABN[p]+' '+k]);});
     if(filt!=='__all'&&!groups.some(function(g){return g[0]===filt;}))filt='__all';
+    var all=items.filter(function(it){return bm[it.id];}), nA=all.filter(function(it){return bm[it.id].n>=2;}).length, nN=all.filter(function(it){return !bm[it.id].last;}).length;
+    var mb=document.getElementById('bmmode');
+    if(mb){mb.innerHTML='';[['all','📌 전체 '+all.length],['again','🔁 한 번 더 '+nA],['new','🆕 아직 안 본 것 '+nN]].forEach(function(g){var b=document.createElement('button');b.type='button';b.textContent=g[1];b.setAttribute('data-bmm',g[0]);if(g[0]===mode)b.classList.add('active');mb.appendChild(b);});
+      var sp=document.createElement('span');sp.className='bmsep';mb.appendChild(sp);
+      [['note','노트 순'],['miss','많이 틀린 순'],['shuffle','🎲 섞기']].forEach(function(g){var b=document.createElement('button');b.type='button';b.textContent=g[1];b.setAttribute('data-bmo',g[0]);if(g[0]===order)b.classList.add('active');mb.appendChild(b);});}
     groups.forEach(function(g){var b=document.createElement('button');b.type='button';b.textContent=g[1];b.setAttribute('data-bmf',g[0]);if(g[0]===filt)b.classList.add('active');fb.appendChild(b);});
     list.innerHTML='';
     var show=sel.filter(function(it){return filt==='__all'||it.panel===filt;});
-    if(!show.length){list.innerHTML='<p class="bmempty">아직 체크한 항목이 없습니다. 문제 제목 오른쪽이나 표 줄 맨 앞의 ☆를 눌러 추가하세요.</p>';return;}
+    if(order==='miss')show=show.slice().sort(function(a,b){var x=bm[a.id],y=bm[b.id];return (y.n-x.n)||(x.ok-y.ok);});
+    else if(order==='shuffle')show=show.slice().sort(function(a,b){if(shuf[a.id]==null)shuf[a.id]=Math.random();if(shuf[b.id]==null)shuf[b.id]=Math.random();return shuf[a.id]-shuf[b.id];});
+    if(!show.length){list.innerHTML='<p class="bmempty">'+(mode==='again'?'"한 번 더"로 표시한 항목이 없습니다. 다시 보기 카드에서 🔁 한 번 더를 누르면 여기에 모입니다.':(mode==='new'?'아직 안 본 항목이 없습니다. 모두 한 번 이상 확인했어요.':'아직 체크한 항목이 없습니다. 문제 제목 오른쪽이나 표 줄 맨 앞의 ☆를 눌러 추가하세요.'))+'</p>';return;}
     show.forEach(function(it){
       var card=document.createElement('div');card.className='bmcard';
       var src=document.createElement('div');src.className='bmsrc';
+      var v=bm[it.id];
       var sp=document.createElement('span');sp.textContent=it.src;src.appendChild(sp);
-      var act=document.createElement('span');act.className='bmact';
-      act.innerHTML='<button type="button" data-bmgo="'+it.id+'">원래 위치로 ↗</button><button type="button" data-bmdel="'+it.id+'">★ 해제</button>';
-      src.appendChild(act);card.appendChild(src);
+      var bd=document.createElement('span');bd.className='bmbadge';
+      bd.innerHTML=(v.n>=2?'<b class="again">🔁 '+v.n+'회째</b>':'')+(v.ok?'<b class="ok">⭕ 연속 '+v.ok+'회</b>':'')+(v.last?'<i>최근 '+(function(d){d=new Date(d);return (d.getMonth()+1)+'/'+d.getDate();})(v.last)+'</i>':'<i>아직 안 봄</i>');
+      src.appendChild(bd);
+      card.classList.toggle('again',v.n>=2);
+      card.appendChild(src);
       var c;
       if(it.kind==='q'){c=it.el.cloneNode(true);}
       else{
@@ -11995,7 +12024,12 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
       }
       qsa('[id]',c).forEach(function(x){x.removeAttribute('id');}); if(c.id)c.removeAttribute('id');
       qsa('.bm',c).forEach(function(x){x.remove();}); c.classList&&c.classList.remove('bm-on'); qsa('.bm-on',c).forEach(function(x){x.classList.remove('bm-on');});
-      card.appendChild(c);list.appendChild(card);
+      card.appendChild(c);
+      var act=document.createElement('div');act.className='bmact';
+      act.innerHTML='<button type="button" class="ok" data-bmok="'+it.id+'">⭕ 맞았어요</button><button type="button" class="again" data-bmagain="'+it.id+'">🔁 한 번 더</button><button type="button" data-bmgo="'+it.id+'">원래 위치 ↗</button><button type="button" class="done" data-bmdel="'+it.id+'">'+(v.ok>=2?'🎓 졸업(해제)':'✓ 해제')+'</button>';
+      card.appendChild(act);
+      if(v.ok>=2){var hn=document.createElement('p');hn.className='bmhint';hn.textContent='두 번 연속 맞혔어요. 이제 졸업해도 좋아요.';card.appendChild(hn);}
+      list.appendChild(card);
     });
   }
   function goTo(id){
@@ -12007,7 +12041,11 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
   document.addEventListener('click',function(e){
     if(!e.target.closest)return;
     var b=e.target.closest('.bm[data-bm]');
-    if(b){e.preventDefault();e.stopPropagation();var id=b.getAttribute('data-bm');if(bm[id])delete bm[id];else bm[id]=Date.now();save(bm);paint();return;}
+    if(b){e.preventDefault();e.stopPropagation();var id=b.getAttribute('data-bm');if(bm[id]){if(bm[id].n>=2&&!confirm('"한 번 더 보기" '+bm[id].n+'회 기록이 있습니다. 해제할까요?'))return;delete bm[id];}else bm[id]={t:Date.now(),n:1,ok:0,last:0};save(bm);paint();return;}
+    var ok=e.target.closest('[data-bmok]');if(ok){var k=ok.getAttribute('data-bmok');if(bm[k]){bm[k].ok=(bm[k].ok||0)+1;bm[k].last=Date.now();save(bm);paint();render();}return;}
+    var ag=e.target.closest('[data-bmagain]');if(ag){var k2=ag.getAttribute('data-bmagain');if(bm[k2]){bm[k2].n=(bm[k2].n||1)+1;bm[k2].ok=0;bm[k2].last=Date.now();save(bm);paint();render();}return;}
+    var mm=e.target.closest('[data-bmm]');if(mm){mode=mm.getAttribute('data-bmm');render();return;}
+    var oo=e.target.closest('[data-bmo]');if(oo){order=oo.getAttribute('data-bmo');if(order==='shuffle')shuf={};render();return;}
     var f=e.target.closest('[data-bmf]');if(f){filt=f.getAttribute('data-bmf');render();return;}
     var g=e.target.closest('[data-bmgo]');if(g){goTo(g.getAttribute('data-bmgo'));return;}
     var d=e.target.closest('[data-bmdel]');if(d){delete bm[d.getAttribute('data-bmdel')];save(bm);paint();render();return;}
@@ -12018,7 +12056,7 @@ html.hdr-hide .subtabs{top:env(safe-area-inset-top,0px)}
     else if(a==='export'){ta.value=JSON.stringify(bm);io.classList.add('show');ta.focus();ta.select();}
     else if(a==='import'){ta.value='';io.classList.add('show');ta.placeholder='백업 내보내기로 받은 글자를 여기에 붙여 넣고 [가져오기 적용]을 누르세요.';ta.focus();}
     else if(a==='copy'){ta.select();try{document.execCommand('copy');x.textContent='복사됨';setTimeout(function(){x.textContent='복사';},1200);}catch(err){}}
-    else if(a==='apply'){try{var o=JSON.parse(ta.value||'{}');Object.keys(o).forEach(function(k){if(byId[k])bm[k]=o[k];});save(bm);paint();render();io.classList.remove('show');}catch(err){alert('형식이 올바르지 않습니다. 백업 내보내기로 받은 글자 전체를 붙여 넣어 주세요.');}}
+    else if(a==='apply'){try{var o=JSON.parse(ta.value||'{}');Object.keys(o).forEach(function(k){var x=N(o[k]);if(byId[k]&&x)bm[k]=x;});save(bm);paint();render();io.classList.remove('show');}catch(err){alert('형식이 올바르지 않습니다. 백업 내보내기로 받은 글자 전체를 붙여 넣어 주세요.');}}
     else if(a==='hideio'){io.classList.remove('show');}
   },true);
   var t5=document.querySelector('.tab[data-p="p5"]');if(t5)t5.addEventListener('click',render);
